@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ayaanshahbaz.edgeone.dev/sitemap.xml
+Sitemap: https://ayaanshahbaz.vercel.app/sitemap.xml
