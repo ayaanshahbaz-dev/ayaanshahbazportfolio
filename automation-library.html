@@ -490,6 +490,43 @@
         </svg>
     </button>
 
+    <!-- Settings Controls (Left) -->
+    <div class="settings-control">
+        <button class="settings-btn" aria-label="Theme Settings" id="settingsBtn" title="Theme Settings">
+            <i data-lucide="settings"></i>
+        </button>
+        <div class="settings-menu color-theme-menu" id="settingsMenu">
+            <h4 class="menu-heading">Color</h4>
+            <button class="theme-option active" data-theme="default">
+                <span class="color-swatch swatch-default"></span> Default
+            </button>
+            <button class="theme-option" data-theme="silver-dawn">
+                <span class="color-swatch swatch-silver-dawn"></span> Silver Dawn
+            </button>
+            <button class="theme-option" data-theme="lavender-stone">
+                <span class="color-swatch swatch-lavender-stone"></span> Lavender Stone
+            </button>
+            <button class="theme-option" data-theme="ocean-breeze">
+                <span class="color-swatch swatch-ocean-breeze"></span> Ocean Breeze
+            </button>
+            <button class="theme-option" data-theme="midnight-fade">
+                <span class="color-swatch swatch-midnight-fade"></span> Midnight Fade
+            </button>
+            <button class="theme-option" data-theme="charcoal-mist">
+                <span class="color-swatch swatch-charcoal-mist"></span> Charcoal Mist
+            </button>
+            <button class="theme-option" data-theme="timeless-dark">
+                <span class="color-swatch swatch-timeless-dark"></span> Timeless Dark
+            </button>
+            <button class="theme-option" data-theme="modern-sophisticate">
+                <span class="color-swatch swatch-modern-sophisticate"></span> Modern Sophisticate
+            </button>
+            <button class="theme-option" data-theme="neutral-minimalism">
+                <span class="color-swatch swatch-neutral-minimalism"></span> Neutral Minimalism
+            </button>
+        </div>
+    </div>
+
     <!-- ===== TOP NAV ===== -->
     <nav class="al-topnav" id="alTopNav">
         <span class="al-nav-brand">Ayaan Shahbaz</span>
@@ -742,7 +779,57 @@
         // Smooth Scroll
         const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smooth: true });
         function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
-        requestAnimationFrame(raf);
+        // Theme Settings Menu Logic
+        const settingsBtn = document.getElementById('settingsBtn');
+        const settingsMenu = document.getElementById('settingsMenu');
+        const themeOptions = document.querySelectorAll('.theme-option');
+        const body = document.body;
+
+        settingsBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            settingsBtn.classList.toggle('active');
+            settingsMenu.classList.toggle('open');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!settingsMenu.contains(e.target) && !settingsBtn.contains(e.target)) {
+                settingsBtn.classList.remove('active');
+                settingsMenu.classList.remove('open');
+            }
+        });
+
+        function setTheme(theme) {
+            const classes = Array.from(body.classList);
+            classes.forEach(className => {
+                if (className.startsWith('theme-') || className === 'light-theme') {
+                    body.classList.remove(className);
+                }
+            });
+            if (theme !== 'default') {
+                body.classList.add('theme-' + theme);
+            }
+            localStorage.setItem('theme', theme);
+
+            themeOptions.forEach(btn => {
+                if (btn.dataset.theme === theme) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+
+        // Apply theme early on load
+        const savedTheme = localStorage.getItem('theme') || 'default';
+        setTheme(savedTheme);
+
+        themeOptions.forEach(btn => {
+            btn.addEventListener('click', () => {
+                setTheme(btn.dataset.theme);
+                settingsBtn.classList.remove('active');
+                settingsMenu.classList.remove('open');
+            });
+        });
 
         gsap.registerPlugin(ScrollTrigger);
 
