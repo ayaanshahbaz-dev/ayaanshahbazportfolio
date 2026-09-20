@@ -3290,3 +3290,37 @@ body.light-theme .htb-tz {
         justify-content: center;
     }
 }
+
+/* ============================================================
+   AUTOMATION LIBRARY — Inline Works List CTA Row
+============================================================ */
+.wl-cta-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+}
+
+.wl-cta-arrow-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wl-cta-arrow {
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.15);
+    line-height: 1;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.wl-item-cta:hover .wl-cta-arrow {
+    color: rgba(255, 255, 255, 0.65);
+    transform: translate(5px, -5px);
+}
+
+.wl-item-cta:hover .wl-title {
+    opacity: 0.75;
+}

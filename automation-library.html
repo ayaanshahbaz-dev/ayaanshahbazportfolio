@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta -->
+    <title>Automation Library | Ayaan Shahbaz — AI Engineer</title>
+    <meta name="description"
+        content="A curated library of real-world automation systems built by Ayaan Shahbaz — AI agents, n8n workflows, RAG pipelines, and intelligent business automation.">
+    <meta name="author" content="Ayaan Shahbaz">
+    <link rel="canonical" href="https://ayaanshahbaz.vercel.app/automation-library.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ayaanshahbaz.vercel.app/automation-library.html">
+    <meta property="og:title" content="Automation Library | Ayaan Shahbaz">
+    <meta property="og:description"
+        content="Real-world automation systems: AI agents, n8n pipelines, RAG workflows, and intelligent business automation by Ayaan Shahbaz.">
+    <meta property="og:image" content="https://ayaanshahbaz.vercel.app/user-photo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0d0d0d">
+
+    <!-- Fonts & Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.35/dist/lenis.min.js"></script>
+
+    <style>
+        /* ===== PAGE LAYOUT ===== */
+        body {
+            padding-bottom: 0;
+            background: #0d0d0d;
+        }
+
+        /* ===== TOP NAV ===== */
+        .al-topnav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.2rem 8%;
+            background: rgba(13, 13, 13, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .al-nav-brand {
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+        }
+
+        .al-back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.45);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .al-back-link:hover {
+            color: #fff;
+        }
+
+        .al-back-link svg {
+            width: 13px;
+            height: 13px;
+            transition: transform 0.2s ease;
+        }
+
+        .al-back-link:hover svg {
+            transform: translateX(-3px);
+        }
+
+        /* ===== HERO HEADER ===== */
+        .al-hero {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 8rem 8% 5rem;
+        }
+
+        .al-hero-bg-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: clamp(8rem, 22vw, 22rem);
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.035);
+            white-space: nowrap;
+            letter-spacing: 0.04em;
+            pointer-events: none;
+            user-select: none;
+            z-index: 0;
+            line-height: 1;
+        }
+
+        .al-hero-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 820px;
+        }
+
+        .al-eyebrow {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.35);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .al-eyebrow::before,
+        .al-eyebrow::after {
+            content: '';
+            width: 30px;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .al-hero-title {
+            font-size: clamp(4.5rem, 10vw, 10rem);
+            font-weight: 900;
+            letter-spacing: -5px;
+            line-height: 0.88;
+            color: #fff;
+            margin-bottom: 2rem;
+        }
+
+        .al-hero-sub {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.38);
+            font-weight: 400;
+            max-width: 480px;
+            line-height: 1.75;
+            margin-bottom: 2.5rem;
+        }
+
+        .al-hero-stat-row {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            margin-top: 1rem;
+        }
+
+        .al-hero-stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.2rem;
+        }
+
+        .al-hero-stat-num {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: -1px;
+            line-height: 1;
+        }
+
+        .al-hero-stat-label {
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .al-stat-divider {
+            width: 1px;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* ===== FILTER BAR ===== */
+        .al-filter-bar {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 2.5rem 8% 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .al-filter-btn {
+            padding: 0.45rem 1.1rem;
+            border-radius: 100px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: transparent;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+
+        .al-filter-btn:hover,
+        .al-filter-btn.active {
+            background: var(--primary-blue, #fff);
+            border-color: var(--primary-blue, #fff);
+            color: #0d0d0d;
+        }
+
+        /* ===== GRID ===== */
+        .al-grid-section {
+            padding: 1rem 8% 6rem;
+        }
+
+        .al-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* ===== CARD ===== */
+        .al-card {
+            background: #111111;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: default;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .al-card:hover {
+            border-color: rgba(255, 255, 255, 0.18);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Image */
+        .al-card-img-wrap {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+            background: #0a0a0a;
+        }
+
+        .al-card-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+            filter: brightness(0.85);
+        }
+
+        .al-card:hover .al-card-img-wrap img {
+            transform: scale(1.04);
+            filter: brightness(1);
+        }
+
+        .al-card-num {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            font-size: 0.65rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.5);
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            padding: 0.3rem 0.7rem;
+            border-radius: 100px;
+        }
+
+        /* Body */
+        .al-card-body {
+            padding: 1.4rem 1.5rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            gap: 0.75rem;
+        }
+
+        .al-card-category {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--primary-blue, #fff);
+            opacity: 0.7;
+        }
+
+        .al-card-title {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+
+        .al-card-desc {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.45);
+            line-height: 1.7;
+            flex: 1;
+        }
+
+        /* Tags */
+        .al-card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 0.25rem;
+        }
+
+        .al-tag {
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 0.28rem 0.7rem;
+            border-radius: 100px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.04);
+            transition: all 0.2s ease;
+        }
+
+        .al-card:hover .al-tag {
+            border-color: rgba(255, 255, 255, 0.18);
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        /* ===== FOOTER (standalone) ===== */
+        .al-footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 2rem 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .al-footer-copy {
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .al-footer-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .al-footer-back:hover {
+            color: #fff;
+        }
+
+        /* Floating back to top */
+        .al-top-btn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            color: #888;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background 0.25s ease, color 0.25s ease, opacity 0.3s ease, transform 0.3s ease;
+            outline: none;
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .al-top-btn.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .al-top-btn:hover {
+            background: #fff;
+            color: #0d0d0d;
+        }
+
+        .al-top-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .al-topnav {
+                padding: 1rem 5%;
+            }
+
+            .al-hero {
+                padding: 7rem 5% 4rem;
+                min-height: 85vh;
+            }
+
+            .al-hero-title {
+                letter-spacing: -3px;
+                font-size: clamp(3rem, 12vw, 5rem);
+            }
+
+            .al-hero-stat-row {
+                gap: 1.5rem;
+            }
+
+            .al-filter-bar {
+                padding: 2rem 5% 1rem;
+            }
+
+            .al-grid-section {
+                padding: 1rem 5% 4rem;
+            }
+
+            .al-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .al-footer {
+                padding: 1.5rem 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Back to top -->
+    <button class="al-top-btn" id="alTopBtn" aria-label="Back to top"
+        onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15" />
+        </svg>
+    </button>
+
+    <!-- ===== TOP NAV ===== -->
+    <nav class="al-topnav" id="alTopNav">
+        <span class="al-nav-brand">Ayaan Shahbaz</span>
+        <a href="index.html" class="al-back-link" id="alBackLink">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6" />
+            </svg>
+            Back to Portfolio
+        </a>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <header class="al-hero" id="alHero">
+        <div class="al-hero-bg-text" aria-hidden="true">LIBRARY</div>
+        <div class="al-hero-content">
+            <p class="al-eyebrow" id="alEyebrow">Automation Library</p>
+            <h1 class="al-hero-title" id="alTitle">Automations<br>That Work.</h1>
+            <p class="al-hero-sub" id="alSub">A curated collection of real automation systems — AI agents, n8n
+                pipelines, and workflow automations that solve actual business problems.</p>
+            <div class="al-hero-stat-row" id="alStats">
+                <div class="al-hero-stat">
+                    <span class="al-hero-stat-num">08</span>
+                    <span class="al-hero-stat-label">Automations</span>
+                </div>
+                <div class="al-stat-divider"></div>
+                <div class="al-hero-stat">
+                    <span class="al-hero-stat-num">5+</span>
+                    <span class="al-hero-stat-label">Categories</span>
+                </div>
+                <div class="al-stat-divider"></div>
+                <div class="al-hero-stat">
+                    <span class="al-hero-stat-num">∞</span>
+                    <span class="al-hero-stat-label">Impact</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== FILTER BAR ===== -->
+    <div class="al-filter-bar" id="alFilterBar">
+        <button class="al-filter-btn active" data-filter="all">All</button>
+        <button class="al-filter-btn" data-filter="ai-agent">AI Agents</button>
+        <button class="al-filter-btn" data-filter="n8n">n8n</button>
+        <button class="al-filter-btn" data-filter="lead-gen">Lead Gen</button>
+        <button class="al-filter-btn" data-filter="content">Content</button>
+        <button class="al-filter-btn" data-filter="market">Market Intel</button>
+    </div>
+
+    <!-- ===== GRID ===== -->
+    <main class="al-grid-section">
+        <div class="al-grid" id="alGrid">
+
+            <!-- Card 01 -->
+            <article class="al-card" data-category="content n8n ai-agent">
+                <div class="al-card-img-wrap">
+                    <img src="n8n-library/Autonomous Content Intelligence System.jpg"
+                        alt="Autonomous Content Intelligence System workflow" loading="lazy">
+                    <span class="al-card-num">01</span>
+                </div>
+                <div class="al-card-body">
+                    <span class="al-card-category">Content · AI Agent</span>
+                    <h2 class="al-card-title">Autonomous Content Intelligence System</h2>
+                    <p class="al-card-desc">An AI-powered content research and generation platform that discovers
+                        trending discussions, analyzes audience interests, generates content assets, stores
+                        organizational memory, and delivers ready-to-publish content automatically through a fully
+                        automated workflow.</p>
+                    <div class="al-card-tags">
+                        <span class="al-tag">n8n</span>
+                        <span class="al-tag">AI Agent</span>
+                        <span class="al-tag">RAG</span>
+                        <span class="al-tag">Slack</span>
+                        <span class="al-tag">Content</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 02 -->
+            <article class="al-card" data-category="ai-agent n8n">
+                <div class="al-card-img-wrap">
+                    <img src="n8n-library/ai-support-automation.jpg" alt="AI Customer Support Automation"
+                        loading="lazy">
+                    <span class="al-card-num">02</span>
+                </div>
+                <div class="al-card-body">
+                    <span class="al-card-category">AI Agent · Support</span>
+                    <h2 class="al-card-title">AI Customer Support Automation</h2>
+                    <p class="al-card-desc">Processes incoming queries via webhook, generating smart AI responses or
+                        routing complex tickets automatically. Handles high-volume support without human intervention,
+                        reducing response time to seconds.</p>
+                    <div class="al-card-tags">
+                        <span class="al-tag">Webhook</span>
+                        <span class="al-tag">OpenAI</span>
+                        <span class="al-tag">n8n</span>
+                        <span class="al-tag">Ticketing</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 03 -->
+            <article class="al-card" data-category="ai-agent n8n">
+                <div class="al-card-img-wrap">
+                    <img src="n8n-library/AI-Powered Dental Clinic Receptionist Automation.jpg"
+                        alt="AI-Powered Dental Clinic Receptionist Automation" loading="lazy">
+                    <span class="al-card-num">03</span>
+                </div>
+                <div class="al-card-body">
+                    <span class="al-card-category">AI Agent · Healthcare</span>
+                    <h2 class="al-card-title">AI-Powered Dental Clinic Receptionist</h2>
+                    <p class="al-card-desc">Automating patient inquiries, appointment scheduling, reminders, and clinic
+                        operations through WhatsApp, AI, Google Sheets, and n8n. Replaces a full-time receptionist with
+                        a 24/7 intelligent agent.</p>
+                    <div class="al-card-tags">
+                        <span class="al-tag">WhatsApp</span>
+                        <span class="al-tag">n8n</span>
+                        <span class="al-tag">Google Sheets</span>
+                        <span class="al-tag">AI</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 04 -->
+            <article class="al-card" data-category="lead-gen n8n">
+                <div class="al-card-img-wrap">
+                    <img src="n8n-library/lead-generation-cold-email.jpg" alt="AI Cold Email and Lead Generation System"
+                        loading="lazy">
+                    <span class="al-card-num">04</span>
+                </div>
+                <div class="al-card-body">
+                    <span class="al-card-category">Lead Gen · Outreach</span>
+                    <h2 class="al-card-title">AI Cold Email & Lead Generation</h2>
+                    <p class="al-card-desc">Automates lead collection from various sources, enriches data, and sends
+                        hyper-personalized cold outreach at scale. Full pipeline from prospecting to follow-up sequences
+                        — no manual effort needed.</p>
+                    <div class="al-card-tags">
+                        <span class="al-tag">n8n</span>
+                        <span class="al-tag">Cold Email</span>
+                        <span class="al-tag">Lead Scraping</span>
+                        <span class="al-tag">Personalization</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 05 -->
+            <article class="al-card" data-category="market n8n">
+                <div class="al-card-img-wrap">
+                    <img src="n8n-library/market-news-intelligence.jpg" alt="Real-Time Market Intelligence System"
+                        loading="lazy">
+                    <span class="al-card-num">05</span>
+                </div>
+                <div class="al-card-body">
+                    <span class="al-card-category">Market Intel · Finance</span>
+                    <h2 class="al-card-title">Real-Time Market Intelligence</h2>
+                    <p class="al-card-desc">Fetches live financial data and news APIs, converting raw metrics into
+                        digestible AI summaries. Delivers concise market briefings automatically to Slack or email on a
+                        scheduled cadence.</p>
+                    <div class="al-card-tags">
+                        <span class="al-tag">Finance API</span>
+                        <span class="al-tag">News API</span>
+                        <span class="al-tag">OpenAI</span>
+                        <span class="al-tag">Slack</span>
+                        <span class="al-tag">n8n</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 06 -->
+            <article class="al-card" data-category="lead-gen n8n">
+                <div class="al-card-img-wrap">
+                    <img src="n8n-library/crm-lead-pipeline.jpg" alt="CRM Lead Pipeline Automation" loading="lazy">
+                    <span class="al-card-num">06</span>
+                </div>
+                <div class="al-card-body">
+                    <span class="al-card-category">Lead Gen · CRM</span>
+                    <h2 class="al-card-title">CRM Lead Pipeline Automation</h2>
+                    <p class="al-card-desc">End-to-end automated CRM pipeline that captures leads, qualifies them using
+                        AI scoring, syncs with CRM systems, and triggers personalized follow-up sequences — all with
+                        zero manual intervention.</p>
+                    <div class="al-card-tags">
+                        <span class="al-tag">CRM</span>
+                        <span class="al-tag">n8n</span>
+                        <span class="al-tag">AI Scoring</span>
+                        <span class="al-tag">Follow-up</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 07 -->
+            <article class="al-card" data-category="content n8n">
+                <div class="al-card-img-wrap">
+                    <img src="n8n-library/content-automation-instagram.jpg" alt="Instagram Content Automation"
+                        loading="lazy">
+                    <span class="al-card-num">07</span>
+                </div>
+                <div class="al-card-body">
+                    <span class="al-card-category">Content · Social</span>
+                    <h2 class="al-card-title">Instagram Content Automation</h2>
+                    <p class="al-card-desc">AI-driven pipeline that generates on-brand Instagram content ideas,
+                        captions, and hashtag sets, then schedules posts automatically. Keeps social media active
+                        without daily manual effort.</p>
+                    <div class="al-card-tags">
+                        <span class="al-tag">Instagram</span>
+                        <span class="al-tag">n8n</span>
+                        <span class="al-tag">AI Captions</span>
+                        <span class="al-tag">Scheduling</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 08 -->
+            <article class="al-card" data-category="n8n ai-agent">
+                <div class="al-card-img-wrap">
+                    <img src="n8n-library/email-retry-automation.jpg" alt="Email Retry and Delivery Automation"
+                        loading="lazy">
+                    <span class="al-card-num">08</span>
+                </div>
+                <div class="al-card-body">
+                    <span class="al-card-category">Email · Reliability</span>
+                    <h2 class="al-card-title">Smart Email Retry System</h2>
+                    <p class="al-card-desc">Intelligent email delivery automation with smart retry logic, bounce
+                        handling, and delivery monitoring. Ensures critical transactional and outreach emails reliably
+                        reach their destination.</p>
+                    <div class="al-card-tags">
+                        <span class="al-tag">Email</span>
+                        <span class="al-tag">n8n</span>
+                        <span class="al-tag">Retry Logic</span>
+                        <span class="al-tag">Monitoring</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="al-footer">
+        <span class="al-footer-copy">© 2026 Ayaan Shahbaz. All automations built for real business impact.</span>
+        <a href="index.html" class="al-footer-back">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round" width="14" height="14">
+                <polyline points="15 18 9 12 15 6" />
+            </svg>
+            Back to Portfolio
+        </a>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Smooth Scroll
+        const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smooth: true });
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero entrance
+        gsap.fromTo('#alTopNav', { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', delay: 0.1 });
+        gsap.fromTo('#alEyebrow', { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out', delay: 0.3 });
+        gsap.fromTo('#alTitle', { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1.1, ease: 'expo.out', delay: 0.5 });
+        gsap.fromTo('#alSub', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out', delay: 0.75 });
+        gsap.fromTo('#alStats', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out', delay: 0.95 });
+        gsap.fromTo('#alFilterBar', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', delay: 1.1 });
+
+        // Cards scroll reveal
+        gsap.utils.toArray('.al-card').forEach((card, i) => {
+            gsap.to(card, {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                ease: 'power3.out',
+                delay: (i % 3) * 0.1,
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 88%',
+                    once: true,
+                }
+            });
+        });
+
+        // Back to top button
+        const topBtn = document.getElementById('alTopBtn');
+        window.addEventListener('scroll', () => {
+            topBtn.classList.toggle('visible', window.scrollY > 400);
+        });
+
+        // Filter logic
+        const filterBtns = document.querySelectorAll('.al-filter-btn');
+        const cards = document.querySelectorAll('.al-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+                cards.forEach(card => {
+                    const cats = card.dataset.category || '';
+                    const show = filter === 'all' || cats.includes(filter);
+                    card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                    card.style.opacity = show ? '1' : '0.15';
+                    card.style.pointerEvents = show ? 'auto' : 'none';
+                    card.style.transform = show ? 'translateY(0)' : 'translateY(8px)';
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
