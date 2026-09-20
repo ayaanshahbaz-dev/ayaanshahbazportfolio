@@ -548,20 +548,7 @@ body {
     border-color: rgba(255, 255, 255, 0.1);
 }
 
-.swatch-timeless-dark {
-    background: #121212;
-    border-color: #D4AF37;
-}
 
-.swatch-modern-sophisticate {
-    background: #0A1128;
-    border-color: #E0E0E0;
-}
-
-.swatch-neutral-minimalism {
-    background: #F9F8F6;
-    border-color: #2C2C2A;
-}
 
 body.theme-silver-dawn {
     --bg-color: #0f121a;
@@ -617,32 +604,7 @@ body.theme-forest-shadow {
     --gradient-purple: #6ee7b7;
 }
 
-body.theme-timeless-dark {
-    --bg-color: #121212;
-    --primary-blue: #D4AF37;
-    --primary-green: #D4AF37;
-    --text-white: #F5F5F0;
-    --text-muted: #8E8D8A;
-    --gradient-purple: #D4AF37;
-}
 
-body.theme-modern-sophisticate {
-    --bg-color: #0A1128;
-    --primary-blue: #E0E0E0;
-    --primary-green: #415A77;
-    --text-white: #FFFFFF;
-    --text-muted: #8A9AAB;
-    --gradient-purple: #E0E0E0;
-}
-
-body.theme-neutral-minimalism {
-    --bg-color: #F9F8F6;
-    --primary-blue: #2C2C2A;
-    --primary-green: #C5B358;
-    --text-white: #1A1A18;
-    --text-muted: #666663;
-    --gradient-purple: #2C2C2A;
-}
 
 .float-btn svg {
     width: 18px;
