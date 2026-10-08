@@ -3404,26 +3404,27 @@ body.light-theme .htb-tz {
    EXACT DESIGN SECTIONS: CAPABILITIES & ARSENAL
 ============================================================ */
 
-/* SECTION 1: WHAT I BUILD (CAPABILITIES) */
+/* SECTION 1: WHAT I BUILD (CAPABILITIES) - FULL WIDTH */
 .section-capabilities {
     position: relative;
-    width: 90%;
-    max-width: 1400px;
-    margin: 4rem auto;
-    background: #09090c;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 28px;
-    padding: 3.5rem 3.5rem 3rem;
+    width: 100%;
+    margin: 0;
+    background: #07070a;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 0;
+    padding: 6rem 5% 5rem;
     overflow: hidden;
     color: #fff;
-    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
 }
 
 .cap-container {
     display: flex;
-    gap: 3.5rem;
+    gap: 4rem;
     position: relative;
     z-index: 2;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 .cap-left {
@@ -3453,7 +3454,7 @@ body.light-theme .htb-tz {
 }
 
 .cap-headline {
-    font-size: 3.8rem;
+    font-size: 4rem;
     font-weight: 900;
     line-height: 0.95;
     letter-spacing: -2px;
@@ -3581,8 +3582,8 @@ body.light-theme .htb-tz {
 
 .cap-watermark {
     position: absolute;
-    bottom: 1.2rem;
-    right: 2.5rem;
+    bottom: 1.5rem;
+    right: 3rem;
     font-size: 0.65rem;
     font-weight: 700;
     letter-spacing: 2px;
@@ -3591,30 +3592,32 @@ body.light-theme .htb-tz {
 }
 
 
-/* SECTION 2: TECH STACK & CAPABILITIES (ARSENAL CONSTELLATION) */
+/* SECTION 2: TECH STACK & CAPABILITIES (FULL BLEED WITH TECH_BG.PNG) */
 .section-arsenal {
     position: relative;
-    width: 90%;
-    max-width: 1400px;
-    margin: 0 auto 5rem;
-    background: #08080a;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 28px;
-    padding: 3.5rem 3.5rem 3.5rem;
+    width: 100%;
+    margin: 0;
+    padding: 6rem 4% 6rem;
+    background: #040406 url('assets/tech_bg.png') center center / cover no-repeat;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 0;
     overflow: hidden;
     color: #fff;
-    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+    min-height: 750px;
 }
 
 .arsenal-container {
     display: flex;
-    gap: 3.5rem;
+    gap: 2rem;
     position: relative;
     z-index: 2;
+    max-width: 1650px;
+    margin: 0 auto;
 }
 
 .arsenal-left {
-    width: 320px;
+    width: 330px;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
@@ -3640,7 +3643,7 @@ body.light-theme .htb-tz {
 }
 
 .arsenal-headline {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
     font-weight: 900;
     line-height: 0.95;
     letter-spacing: -2px;
@@ -3712,8 +3715,9 @@ body.light-theme .htb-tz {
     gap: 1rem;
     padding: 1rem 1.25rem;
     border-radius: 14px;
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
 }
 
 .prompt-icon-box {
@@ -3753,7 +3757,7 @@ body.light-theme .htb-tz {
 .arsenal-stage {
     flex: 1;
     position: relative;
-    min-height: 520px;
+    min-height: 560px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3763,9 +3767,9 @@ body.light-theme .htb-tz {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 220px;
-    height: 220px;
+    transform: translate(-50%, -46%);
+    width: 480px;
+    height: 480px;
     z-index: 5;
     pointer-events: none;
 }
@@ -3774,7 +3778,8 @@ body.light-theme .htb-tz {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    filter: drop-shadow(0 0 35px rgba(255, 255, 255, 0.15));
+    mix-blend-mode: screen;
+    filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.2));
     animation: rock-float 6s ease-in-out infinite alternate;
 }
 
