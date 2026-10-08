@@ -540,7 +540,7 @@
                 pipelines, and workflow automations that solve actual business problems.</p>
             <div class="al-hero-stat-row" id="alStats">
                 <div class="al-hero-stat">
-                    <span class="al-hero-stat-num">08</span>
+                    <span class="al-hero-stat-num">10</span>
                     <span class="al-hero-stat-label">Automations</span>
                 </div>
                 <div class="al-stat-divider"></div>
@@ -550,7 +550,7 @@
                 </div>
                 <div class="al-stat-divider"></div>
                 <div class="al-hero-stat">
-                    <span class="al-hero-stat-num">∞</span>
+                    <span class="al-hero-stat-num">Real</span>
                     <span class="al-hero-stat-label">Impact</span>
                 </div>
             </div>
@@ -749,6 +749,47 @@
                 </div>
             </article>
 
+            <!-- Card 09 -->
+            <article class="al-card" data-category="lead-gen n8n">
+                <div class="al-card-img-wrap">
+                    <img src="n8n-library/crm-lead-pipeline.jpg" alt="WhatsApp Outreach Automation" loading="lazy">
+                    <span class="al-card-num">09</span>
+                </div>
+                <div class="al-card-body">
+                    <span class="al-card-category">Outreach · n8n</span>
+                    <h2 class="al-card-title">WhatsApp Outreach Automation</h2>
+                    <p class="al-card-desc">Automates lead outreach, message sequences, response tracking, and CRM
+                        synchronization over WhatsApp for multi-channel sales pipeline execution.</p>
+                    <div class="al-card-tags">
+                        <span class="al-tag">WhatsApp</span>
+                        <span class="al-tag">n8n</span>
+                        <span class="al-tag">CRM</span>
+                        <span class="al-tag">Outreach</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 10 -->
+            <article class="al-card" data-category="ai-agent n8n">
+                <div class="al-card-img-wrap">
+                    <img src="n8n-library/AI-Powered Dental Clinic Receptionist Automation.jpg"
+                        alt="AI Voice Receptionist" loading="lazy">
+                    <span class="al-card-num">10</span>
+                </div>
+                <div class="al-card-body">
+                    <span class="al-card-category">AI Agent · Voice</span>
+                    <h2 class="al-card-title">AI Voice Receptionist</h2>
+                    <p class="al-card-desc">Voice-enabled AI receptionist system handling incoming phone calls,
+                        answering queries, qualifying prospects, and booking calendar appointments automatically.</p>
+                    <div class="al-card-tags">
+                        <span class="al-tag">Vapi</span>
+                        <span class="al-tag">AI Voice</span>
+                        <span class="al-tag">Calendly</span>
+                        <span class="al-tag">n8n</span>
+                    </div>
+                </div>
+            </article>
+
         </div>
     </main>
 
@@ -770,6 +811,7 @@
         // Smooth Scroll
         const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smooth: true });
         function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
         // Theme Settings Menu Logic
         const settingsBtn = document.getElementById('settingsBtn');
         const settingsMenu = document.getElementById('settingsMenu');
