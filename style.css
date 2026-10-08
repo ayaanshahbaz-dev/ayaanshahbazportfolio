@@ -3399,3 +3399,594 @@ body.light-theme .htb-tz {
 .wl-item-cta:hover .wl-title {
     opacity: 0.75;
 }
+
+/* ============================================================
+   EXACT DESIGN SECTIONS: CAPABILITIES & ARSENAL
+============================================================ */
+
+/* SECTION 1: WHAT I BUILD (CAPABILITIES) */
+.section-capabilities {
+    position: relative;
+    width: 90%;
+    max-width: 1400px;
+    margin: 4rem auto;
+    background: #09090c;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 28px;
+    padding: 3.5rem 3.5rem 3rem;
+    overflow: hidden;
+    color: #fff;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+}
+
+.cap-container {
+    display: flex;
+    gap: 3.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.cap-left {
+    width: 320px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.cap-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.cap-eyebrow::after {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.cap-headline {
+    font-size: 3.8rem;
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -2px;
+    color: #ffffff;
+    margin-bottom: 1.8rem;
+}
+
+.cap-subtext {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.45);
+    line-height: 1.65;
+    margin-bottom: 2rem;
+}
+
+.cap-divider {
+    width: 35px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.15);
+    margin-bottom: 2rem;
+}
+
+.cap-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.45rem 1rem;
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.03);
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+    width: fit-content;
+}
+
+.cap-pill-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 10px #10b981;
+}
+
+.cap-right-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.cap-card {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 18px;
+    padding: 1.5rem 1.25rem 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.cap-card:hover {
+    border-color: rgba(255, 255, 255, 0.18);
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.cap-card-num {
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.cap-card-num::after {
+    content: '';
+    width: 15px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.cap-card-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.8rem;
+}
+
+.cap-card-desc {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.45);
+    line-height: 1.55;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.cap-card-img-wrap {
+    width: 100%;
+    aspect-ratio: 16/10;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #000;
+}
+
+.cap-card-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.9);
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.cap-card:hover .cap-card-img-wrap img {
+    transform: scale(1.05);
+    filter: brightness(1);
+}
+
+.cap-watermark {
+    position: absolute;
+    bottom: 1.2rem;
+    right: 2.5rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.15);
+    text-transform: uppercase;
+}
+
+
+/* SECTION 2: TECH STACK & CAPABILITIES (ARSENAL CONSTELLATION) */
+.section-arsenal {
+    position: relative;
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto 5rem;
+    background: #08080a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 28px;
+    padding: 3.5rem 3.5rem 3.5rem;
+    overflow: hidden;
+    color: #fff;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+}
+
+.arsenal-container {
+    display: flex;
+    gap: 3.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.arsenal-left {
+    width: 320px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.arsenal-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.arsenal-eyebrow::after {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.arsenal-headline {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -2px;
+    color: #ffffff;
+    margin-bottom: 1.8rem;
+}
+
+.arsenal-subtext {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.45);
+    line-height: 1.65;
+    margin-bottom: 2rem;
+}
+
+.arsenal-legend-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.arsenal-legend-item {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.tcl-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-p {
+    background: #a855f7;
+    box-shadow: 0 0 8px #a855f7;
+}
+
+.dot-g {
+    background: #10b981;
+    box-shadow: 0 0 8px #10b981;
+}
+
+.dot-b {
+    background: #3b82f6;
+    box-shadow: 0 0 8px #3b82f6;
+}
+
+.dot-o {
+    background: #e55d38;
+    box-shadow: 0 0 8px #e55d38;
+}
+
+.dot-y {
+    background: #f59e0b;
+    box-shadow: 0 0 8px #f59e0b;
+}
+
+.arsenal-prompt-card {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.prompt-icon-box {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.8);
+    flex-shrink: 0;
+}
+
+.prompt-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.prompt-t1 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.prompt-t2 {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Constellation Stage */
+.arsenal-stage {
+    flex: 1;
+    position: relative;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.asteroid-center-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 220px;
+    height: 220px;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.asteroid-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 35px rgba(255, 255, 255, 0.15));
+    animation: rock-float 6s ease-in-out infinite alternate;
+}
+
+@keyframes rock-float {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(-10px) rotate(3deg);
+    }
+}
+
+.orbital-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.node-cluster {
+    position: absolute;
+    z-index: 6;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.cluster-label {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff;
+}
+
+.cluster-ai {
+    top: 0%;
+    left: 40%;
+}
+
+.cluster-backend {
+    top: 25%;
+    left: 0%;
+}
+
+.cluster-fullstack {
+    bottom: 0%;
+    left: 32%;
+}
+
+.cluster-automation {
+    top: 10%;
+    right: 2%;
+}
+
+.cluster-platforms {
+    bottom: 2%;
+    right: 0%;
+}
+
+.node-group-box {
+    background: rgba(15, 15, 20, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 0.85rem 1.1rem;
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.node-group-box:hover {
+    border-color: rgba(255, 255, 255, 0.22);
+    transform: translateY(-2px);
+}
+
+.brand-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.brand-name {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.sub-chips-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.sub-chip {
+    font-size: 0.68rem;
+    font-weight: 600;
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.sub-chip svg {
+    width: 12px;
+    height: 12px;
+}
+
+.tech-grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 1rem;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+
+    .cap-container,
+    .arsenal-container {
+        flex-direction: column;
+    }
+
+    .cap-left,
+    .arsenal-left {
+        width: 100%;
+    }
+
+    .cap-right-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .arsenal-stage {
+        min-height: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .section-capabilities,
+    .section-arsenal {
+        width: 95%;
+        padding: 2rem 1.5rem;
+    }
+
+    .cap-headline,
+    .arsenal-headline {
+        font-size: 2.8rem;
+    }
+
+    .cap-right-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cluster-ai {
+        top: 0;
+        left: 5%;
+    }
+
+    .cluster-backend {
+        top: 20%;
+        left: 5%;
+    }
+
+    .cluster-automation {
+        top: 45%;
+        left: 5%;
+    }
+
+    .cluster-fullstack {
+        top: 65%;
+        left: 5%;
+    }
+
+    .cluster-platforms {
+        top: 82%;
+        left: 5%;
+    }
+
+    .node-cluster {
+        position: relative;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        margin-bottom: 1rem;
+    }
+
+    .orbital-svg,
+    .asteroid-center-wrap {
+        display: none;
+    }
+
+    .arsenal-stage {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        min-height: auto;
+    }
+}
