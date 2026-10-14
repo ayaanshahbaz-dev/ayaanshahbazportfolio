@@ -36,9 +36,11 @@
     <meta name="twitter:creator" content="@ayaanshahbaz">
 
     <!-- Favicon -->
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/favicon.svg">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
     <meta name="theme-color" content="#0d0d0d">
 
     <!-- Preload critical resources -->
@@ -134,6 +136,9 @@
 
         <!-- Sticky Layer that perfectly follows scroll -->
         <div class="sticky-image-container">
+            <!-- Mountain Background Layer -->
+            <div class="hero-mountains-bg" aria-hidden="true"></div>
+
             <!-- Huge Background Text stays fixed in background -->
             <div class="bg-text" aria-hidden="true">PORTFOLIO</div>
 
@@ -149,20 +154,18 @@
         </div>
 
         <div class="content-layers">
-            <!-- Premium Bottom Navigation -->
-
             <!-- HERO SECTION -->
             <section class="hero-container" id="heroSection">
                 <!-- Hero Top Bar -->
                 <div class="hero-topbar">
-                    <div class="htb-left">
+                    <div class="htb-pill">
                         <span class="status-dot"></span>
                         <span class="htb-text">AVAILABLE FOR WORK</span>
                     </div>
                     <div class="htb-right">
                         <span class="htb-date" id="localDateDisplay">--- -- ----</span>
                         <span class="htb-divider">|</span>
-                        <span class="htb-text" id="localTimeDisplay">--:--:--</span>
+                        <span class="htb-time" id="localTimeDisplay">--:--:--</span>
                         <span class="htb-tz" id="localTzDisplay">---</span>
                     </div>
                 </div>
@@ -170,28 +173,60 @@
                 <main class="hero-content">
                     <!-- Left Content -->
                     <div class="left-content">
-                        <h2 class="greeting">Hi I'm</h2>
-                        <h1 class="name"><span class="first-name">Ayaan</span><br><span class="last-name">Shahbaz</span>
-                        </h1>
+                        <div class="greeting-wrap">
+                            <span class="greeting-dash"></span>
+                            <h2 class="greeting">HI I'M</h2>
+                        </div>
+                        <h1 class="name"><span class="first-name">Ayaan</span><br><span class="last-name">Shahbaz</span></h1>
                         <p class="description">
-                            Building AI-powered systems, SaaS applications, backend APIs, and intelligent automation
-                            workflows.
+                            Building AI-powered systems, SaaS applications, backend APIs, and intelligent automation workflows that solve real business problems.
                         </p>
                         <div class="cta-buttons">
                             <a href="Ayaan-Shahbaz.pdf" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-outline" download="Ayaan-Shahbaz.pdf">
-                                <i data-lucide="download"></i> Download Resume
+                                class="btn btn-primary-pill" download="Ayaan-Shahbaz.pdf">
+                                <i data-lucide="download"></i> DOWNLOAD RESUME
                             </a>
-                            <a href="#workSection" class="btn btn-outline">
-                                <i data-lucide="briefcase"></i> View Projects
+                            <a href="#workSection" class="btn btn-outline-pill">
+                                <i data-lucide="briefcase"></i> VIEW PROJECTS
                             </a>
                         </div>
                     </div>
 
                     <!-- Right Content -->
                     <div class="right-content">
-                        <h3 class="role-subtitle">FULL-STACK ENGINEER</h3>
-                        <h2 class="role-title">AI<br>AUTOMATION</h2>
+                        <div class="role-subtitle-wrap">
+                            <span class="role-dash"></span>
+                            <h3 class="role-subtitle">FULL-STACK ENGINEER</h3>
+                        </div>
+                        <h2 class="role-title">AI<br>Automation</h2>
+
+                        <!-- Feature list with icons -->
+                        <div class="hero-feature-list">
+                            <div class="hfl-item">
+                                <div class="hfl-icon"><i data-lucide="cpu"></i></div>
+                                <span class="hfl-label">AI Systems</span>
+                            </div>
+                            <div class="hfl-item">
+                                <div class="hfl-icon"><i data-lucide="database"></i></div>
+                                <span class="hfl-label">Backend APIs</span>
+                            </div>
+                            <div class="hfl-item">
+                                <div class="hfl-icon"><i data-lucide="box"></i></div>
+                                <span class="hfl-label">SaaS Applications</span>
+                            </div>
+                            <div class="hfl-item">
+                                <div class="hfl-icon"><i data-lucide="settings"></i></div>
+                                <span class="hfl-label">Automation Workflows</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Rail Scroll Indicator -->
+                    <div class="hero-scroll-rail" aria-hidden="true">
+                        <span class="hsr-text">SCROLL</span>
+                        <div class="hsr-track">
+                            <span class="hsr-dot"></span>
+                        </div>
                     </div>
                 </main>
             </section>
@@ -631,64 +666,29 @@
 
                 <!-- Card 01 — AI Systems -->
                 <div class="wib-card">
-                    <div class="wib-card-body">
-                        <div class="wib-card-header">
-                            <span class="wib-card-num">01</span>
-                            <span class="wib-card-num-line"></span>
-                        </div>
-                        <h3 class="wib-card-title">AI Systems</h3>
-                        <p class="wib-card-desc">AI agents, RAG systems, LLM integrations and intelligent business
-                            solutions.</p>
-                    </div>
                     <div class="wib-card-visual">
-                        <img src="content/Images/wib-ai-systems.png" alt="AI Systems visual" loading="lazy">
+                        <img src="content/Images/wib-ai-systems.png" alt="AI Systems" loading="lazy">
                     </div>
                 </div>
 
                 <!-- Card 02 — Business Automation -->
                 <div class="wib-card">
-                    <div class="wib-card-body">
-                        <div class="wib-card-header">
-                            <span class="wib-card-num">02</span>
-                            <span class="wib-card-num-line"></span>
-                        </div>
-                        <h3 class="wib-card-title">Business<br>Automation</h3>
-                        <p class="wib-card-desc">Automated workflows connecting APIs, CRMs, messaging platforms and
-                            business tools.</p>
-                    </div>
                     <div class="wib-card-visual">
-                        <img src="content/Images/wib-automation.png" alt="Business Automation visual" loading="lazy">
+                        <img src="content/Images/wib-automation.png" alt="Business Automation" loading="lazy">
                     </div>
                 </div>
 
                 <!-- Card 03 — Full-Stack Applications -->
                 <div class="wib-card">
-                    <div class="wib-card-body">
-                        <div class="wib-card-header">
-                            <span class="wib-card-num">03</span>
-                            <span class="wib-card-num-line"></span>
-                        </div>
-                        <h3 class="wib-card-title">Full-Stack<br>Applications</h3>
-                        <p class="wib-card-desc">SaaS products, internal tools, dashboards, authentication and complete
-                            web applications.</p>
-                    </div>
                     <div class="wib-card-visual">
-                        <img src="content/Images/wib-fullstack.png" alt="Full-Stack Applications visual" loading="lazy">
+                        <img src="content/Images/wib-fullstack.png" alt="Full-Stack Applications" loading="lazy">
                     </div>
                 </div>
 
                 <!-- Card 04 — Backend & Integrations -->
                 <div class="wib-card">
-                    <div class="wib-card-body">
-                        <div class="wib-card-header">
-                            <span class="wib-card-num">04</span>
-                            <span class="wib-card-num-line"></span>
-                        </div>
-                        <h3 class="wib-card-title">Backend &amp;<br>Integrations</h3>
-                        <p class="wib-card-desc">Scalable APIs, databases, webhooks and third-party integrations.</p>
-                    </div>
                     <div class="wib-card-visual">
-                        <img src="content/Images/wib-backend.png" alt="Backend and Integrations visual" loading="lazy">
+                        <img src="content/Images/wib-backend.png" alt="Backend and Integrations" loading="lazy">
                     </div>
                 </div>
 
@@ -698,143 +698,269 @@
 
 
     <section class="tech-section" id="techSection">
-        <div class="tech-wrap">
-            <div class="tech-left">
+        <div class="tech-bg-overlay" aria-hidden="true"></div>
+
+        <div class="tech-container">
+            <!-- Left Header & Legend & Terminal Box -->
+            <div class="tech-left-col">
                 <div class="about-eyebrow text-blue">ARSENAL</div>
                 <h2 class="tech-title">Tech Stack &amp;<br>Capabilities.</h2>
-                <p class="tech-sub">Core engineering technologies, AI architectures, backend systems, and enterprise
-                    integrations.</p>
+                <p class="tech-sub">A curated set of technologies I use to build modern, scalable, and AI-powered systems.</p>
+
+                <!-- Colored Legend -->
                 <div class="tech-legend">
-                    <div class="tcl-row"><span class="tcl-dot" style="background:#8b5cf6"></span>AI &amp; LLMs</div>
-                    <div class="tcl-row"><span class="tcl-dot" style="background:#10b981"></span>Backend &amp; APIs
+                    <div class="tcl-row"><span class="tcl-dot" style="background:#a855f7; box-shadow: 0 0 8px rgba(168,85,247,0.6);"></span>AI &amp; LLMs</div>
+                    <div class="tcl-row"><span class="tcl-dot" style="background:#10b981; box-shadow: 0 0 8px rgba(16,185,129,0.6);"></span>Backend &amp; APIs</div>
+                    <div class="tcl-row"><span class="tcl-dot" style="background:#3b82f6; box-shadow: 0 0 8px rgba(59,130,246,0.6);"></span>Full-Stack</div>
+                    <div class="tcl-row"><span class="tcl-dot" style="background:#f97316; box-shadow: 0 0 8px rgba(249,115,22,0.6);"></span>Automation</div>
+                    <div class="tcl-row"><span class="tcl-dot" style="background:#eab308; box-shadow: 0 0 8px rgba(234,179,8,0.6);"></span>Platforms &amp; Integrations</div>
+                </div>
+
+                <div class="tech-left-divider"></div>
+
+                <!-- Terminal Quote Box -->
+                <div class="tech-quote-card">
+                    <div class="tqc-icon"><i data-lucide="terminal"></i></div>
+                    <div class="tqc-body">
+                        <span class="tqc-title">Always learning. Always building.</span>
+                        <span class="tqc-sub">Open to new tools and technologies.</span>
                     </div>
-                    <div class="tcl-row"><span class="tcl-dot" style="background:#3b82f6"></span>Full-Stack</div>
-                    <div class="tcl-row"><span class="tcl-dot" style="background:#e55d38"></span>Automation</div>
-                    <div class="tcl-row"><span class="tcl-dot" style="background:#f59e0b"></span>Platforms &amp;
-                        Integrations</div>
                 </div>
             </div>
-            <div class="tech-cloud-wrap">
-                <div class="tech-grid-container" id="techGridContainer">
 
-                    <!-- AI & LLMs -->
-                    <div class="tech-cat-group">
-                        <span class="tech-cat-label text-purple"><i data-lucide="bot"></i> AI &amp; LLMs</span>
-                        <div class="tech-cat-chips">
-                            <span class="t-chip t-chip-core" style="--cc:#4b8bbe;"><img class="tc-logo"
-                                    src="https://cdn.simpleicons.org/python/4b8bbe" alt="Python"
-                                    loading="lazy">Python</span>
-                            <span class="t-chip t-chip-core" style="--cc:#8b5cf6;"><span class="tc-logo-ph">AI</span>LLM
-                                APIs</span>
-                            <span class="t-chip t-chip-core" style="--cc:#8b5cf6;"><span class="tc-logo-ph">AG</span>AI
-                                Agents</span>
-                            <span class="t-chip t-chip-core" style="--cc:#8b5cf6;"><span
-                                    class="tc-logo-ph">RAG</span>RAG</span>
-                            <span class="t-chip t-chip-core" style="--cc:#a855f7;"><span
-                                    class="tc-logo-ph">MCP</span>MCP</span>
-                            <span class="t-chip t-chip-sub" style="--cc:#8b5cf6;">Prompt Engineering</span>
-                            <span class="t-chip t-chip-core" style="--cc:#10a37f;"><svg class="tc-logo"
-                                    style="fill: #10a37f;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A6.0651 6.0651 0 0 0 19.0192 19.818a5.9847 5.9847 0 0 0 3.9977-2.9001 6.0462 6.0462 0 0 0-.735-7.0968ZM8.7504 6.2574c.143-.3773.3444-.727.6045-1.0494a4.3214 4.3214 0 0 1 4.8693-1.3995 4.3243 4.3243 0 0 1 2.825 3.3284l-1.018.587-5.59-1.9365-1.6908-.53ZM2.8988 12.025c0-.629.1352-1.246.3956-1.8155a4.321 4.321 0 0 1 3.5186-2.5857 4.3243 4.3243 0 0 1 4.0957 1.5794l-1.018 1.7635-4.4822 5.0601-2.122-1.225A4.3204 4.3204 0 0 1 2.8988 12.025Zm12.35 6.0125a4.3243 4.3243 0 0 1-2.825-3.3284l1.018-.587 5.59 1.9365 1.6909.53a4.3214 4.3214 0 0 1-4.8693 1.3995c-.2601.3224-.4615.6721-.6046 1.0494Zm-6.495 1.0494c-.1431.3773-.3445.727-.6046 1.0494a4.3214 4.3214 0 0 1-4.8693-1.3995 4.3243 4.3243 0 0 1-2.825-3.3284l1.018-.587 5.59 1.9365c.6775.2125 1.2588.4239 1.6908.53Zm8.8142-6.52c0 .629-.1352 1.246-.3956 1.8155a4.3214 4.3214 0 0 1-3.5186 2.5857 4.3243 4.3243 0 0 1-4.0957-1.5794l1.018-1.7635 4.4822-5.06 2.122 1.225a4.3204 4.3204 0 0 1 .3877 2.7767Zm-6.5828-2.5647 1.018-1.7635 1.018 1.7635v3.527l-1.018 1.7635-1.018-1.7635v-3.527Z" />
-                                </svg>OpenAI</span>
-                            <span class="t-chip t-chip-sub" style="--cc:#6b7280;">OpenRouter</span>
-                            <span class="t-chip t-chip-sub" style="--cc:#d97706;"><img class="tc-logo"
-                                    src="https://cdn.simpleicons.org/anthropic/d97706" alt="Anthropic"
-                                    loading="lazy">Anthropic / Claude</span>
-                        </div>
-                    </div>
+            <!-- Constellation Stage with Central Asteroid & Connecting Nodes -->
+            <div class="tech-stage-col" id="techStageWrap">
+                <!-- SVG Connecting Orbital Curved Lines & Glowing Particles -->
+                <svg class="tech-orbit-svg" viewBox="0 0 1000 680" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <defs>
+                        <!-- Node glow dots -->
+                        <filter id="glowPurple" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur stdDeviation="3" result="blur" />
+                            <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+                        </filter>
+                        <filter id="glowGreen" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur stdDeviation="3" result="blur" />
+                            <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+                        </filter>
+                        <filter id="glowBlue" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur stdDeviation="3" result="blur" />
+                            <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+                        </filter>
+                        <filter id="glowOrange" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur stdDeviation="3" result="blur" />
+                            <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+                        </filter>
+                        <filter id="glowYellow" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur stdDeviation="3" result="blur" />
+                            <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+                        </filter>
+                    </defs>
 
-                    <!-- Backend & APIs -->
-                    <div class="tech-cat-group">
-                        <span class="tech-cat-label text-green"><i data-lucide="server"></i> Backend &amp; APIs</span>
-                        <div class="tech-cat-chips">
-                            <span class="t-chip t-chip-core" style="--cc:#10b981;"><img class="tc-logo"
-                                    src="https://cdn.simpleicons.org/django/10b981" alt="Django"
-                                    loading="lazy">Django</span>
-                            <span class="t-chip t-chip-core" style="--cc:#10b981;"><span
-                                    class="tc-logo-ph">DRF</span>Django REST Framework</span>
-                            <span class="t-chip t-chip-core" style="--cc:#10b981;"><span
-                                    class="tc-logo-ph">API</span>REST APIs</span>
-                            <span class="t-chip t-chip-sub" style="--cc:#ec4899;"><span
-                                    class="tc-logo-ph">WH</span>Webhooks</span>
-                            <span class="t-chip t-chip-sub" style="--cc:#f59e0b;">Authentication</span>
-                            <span class="t-chip t-chip-sub" style="--cc:#f59e0b;">OAuth</span>
-                            <span class="t-chip t-chip-sub" style="--cc:#10b981;">RBAC</span>
-                            <span class="t-chip t-chip-sub" style="--cc:#84cc16;"><span
-                                    class="tc-logo-ph">{}</span>JSON</span>
-                        </div>
-                    </div>
+                    <!-- Orbit Ring 1 (Central Ellipse) -->
+                    <ellipse cx="540" cy="340" rx="260" ry="170" stroke="rgba(255,255,255,0.08)" stroke-width="1.2" stroke-dasharray="4 6" />
+                    <!-- Orbit Ring 2 (Tilted wider ellipse) -->
+                    <ellipse cx="540" cy="340" rx="350" ry="230" stroke="rgba(255,255,255,0.05)" stroke-width="1" transform="rotate(-15 540 340)" />
 
-                    <!-- Full-Stack -->
-                    <div class="tech-cat-group">
-                        <span class="tech-cat-label text-blue"><i data-lucide="code-2"></i> Full-Stack</span>
-                        <div class="tech-cat-chips">
-                            <span class="t-chip t-chip-core" style="--cc:#3b82f6;"><img class="tc-logo"
-                                    src="https://cdn.simpleicons.org/nextdotjs/ffffff" alt="Next.js"
-                                    loading="lazy">Next.js</span>
-                            <span class="t-chip t-chip-core" style="--cc:#3178c6;"><img class="tc-logo"
-                                    src="https://cdn.simpleicons.org/typescript/3178c6" alt="TypeScript"
-                                    loading="lazy">TypeScript</span>
-                            <span class="t-chip t-chip-core" style="--cc:#61dafb;"><img class="tc-logo"
-                                    src="https://cdn.simpleicons.org/react/61dafb" alt="React"
-                                    loading="lazy">React</span>
-                            <span class="t-chip t-chip-sub" style="--cc:#06b6d4;"><img class="tc-logo"
-                                    src="https://cdn.simpleicons.org/tailwindcss/06b6d4" alt="Tailwind CSS"
-                                    loading="lazy">Tailwind CSS</span>
-                            <span class="t-chip t-chip-core" style="--cc:#4169e1;"><img class="tc-logo"
-                                    src="https://cdn.simpleicons.org/postgresql/4169e1" alt="PostgreSQL"
-                                    loading="lazy">PostgreSQL</span>
-                            <span class="t-chip t-chip-core" style="--cc:#3ecf8e;"><img class="tc-logo"
-                                    src="https://cdn.simpleicons.org/supabase/3ecf8e" alt="Supabase"
-                                    loading="lazy">Supabase</span>
-                        </div>
-                    </div>
+                    <!-- Curved connecting paths from clusters to asteroid core -->
+                    <!-- Path: AI & LLMs (Top) -> Asteroid -->
+                    <path class="orbit-path" d="M 430 110 C 470 140 500 200 520 260" stroke="rgba(168,85,247,0.3)" stroke-width="1.2" />
+                    <circle cx="430" cy="110" r="3.5" fill="#a855f7" filter="url(#glowPurple)" />
+                    <circle cx="520" cy="260" r="3" fill="#a855f7" filter="url(#glowPurple)" />
 
-                    <!-- Automation -->
-                    <div class="tech-cat-group">
-                        <span class="tech-cat-label text-orange"><i data-lucide="cpu"></i> Automation</span>
-                        <div class="tech-cat-chips">
-                            <span class="t-chip t-chip-core" style="--cc:#e55d38;"><img class="tc-logo"
-                                    src="https://cdn.simpleicons.org/n8n/e55d38" alt="n8n" loading="lazy">n8n</span>
-                            <span class="t-chip t-chip-sub" style="--cc:#9b59b6;"><img class="tc-logo"
-                                    src="https://cdn.simpleicons.org/make/9b59b6" alt="Make" loading="lazy">Make</span>
-                            <span class="t-chip t-chip-sub" style="--cc:#ff4500;"><img class="tc-logo"
-                                    src="https://cdn.simpleicons.org/zapier/ff4500" alt="Zapier"
-                                    loading="lazy">Zapier</span>
-                            <span class="t-chip t-chip-sub" style="--cc:#e55d38;">Workflow Orchestration</span>
-                            <span class="t-chip t-chip-sub" style="--cc:#e55d38;">API Integrations</span>
-                        </div>
-                    </div>
+                    <!-- Path: Backend & APIs (Middle-Left) -> Asteroid -->
+                    <path class="orbit-path" d="M 275 220 C 340 230 400 280 440 330" stroke="rgba(16,185,129,0.3)" stroke-width="1.2" />
+                    <circle cx="275" cy="220" r="3.5" fill="#10b981" filter="url(#glowGreen)" />
+                    <circle cx="440" cy="330" r="3" fill="#10b981" filter="url(#glowGreen)" />
 
-                    <!-- Platforms & Integrations -->
-                    <div class="tech-cat-group">
-                        <span class="tech-cat-label text-yellow"><i data-lucide="share-2"></i> Platforms &amp;
-                            Integrations</span>
-                        <div class="tech-cat-chips">
-                            <span class="t-chip t-chip-sub" style="--cc:#007bc7;">Vapi</span>
-                            <span class="t-chip t-chip-sub" style="--cc:#25d366;"><img class="tc-logo"
-                                    src="https://cdn.simpleicons.org/whatsapp/25d366" alt="WhatsApp"
-                                    loading="lazy">WhatsApp</span>
-                            <span class="t-chip t-chip-sub" style="--cc:#4a154b;"><img class="tc-logo"
-                                    src="https://cdn.simpleicons.org/slack/4a154b" alt="Slack"
-                                    loading="lazy">Slack</span>
-                            <span class="t-chip t-chip-sub" style="--cc:#ff7a59;"><img class="tc-logo"
-                                    src="https://cdn.simpleicons.org/hubspot/ff7a59" alt="HubSpot"
-                                    loading="lazy">HubSpot</span>
-                            <span class="t-chip t-chip-sub" style="--cc:#18bfff;"><img class="tc-logo"
-                                    src="https://cdn.simpleicons.org/airtable/18bfff" alt="Airtable"
-                                    loading="lazy">Airtable</span>
-                            <span class="t-chip t-chip-sub" style="--cc:#006bfc;"><img class="tc-logo"
-                                    src="https://cdn.simpleicons.org/calendly/006bfc" alt="Calendly"
-                                    loading="lazy">Calendly</span>
-                            <span class="t-chip t-chip-sub" style="--cc:#4285f4;"><img class="tc-logo"
-                                    src="https://cdn.simpleicons.org/googlecalendar/4285f4" alt="Google Calendar"
-                                    loading="lazy">Google Calendar</span>
-                        </div>
-                    </div>
+                    <!-- Path: Full-Stack (Bottom-Left) -> Asteroid -->
+                    <path class="orbit-path" d="M 330 460 C 380 470 430 440 470 410" stroke="rgba(59,130,246,0.3)" stroke-width="1.2" />
+                    <circle cx="330" cy="460" r="3.5" fill="#3b82f6" filter="url(#glowBlue)" />
+                    <circle cx="470" cy="410" r="3" fill="#3b82f6" filter="url(#glowBlue)" />
 
+                    <!-- Path: Automation (Top-Right) -> Asteroid -->
+                    <path class="orbit-path" d="M 800 185 C 720 190 660 250 610 300" stroke="rgba(249,115,22,0.3)" stroke-width="1.2" />
+                    <circle cx="800" cy="185" r="3.5" fill="#f97316" filter="url(#glowOrange)" />
+                    <circle cx="610" cy="300" r="3" fill="#f97316" filter="url(#glowOrange)" />
+
+                    <!-- Path: Platforms & Integrations (Bottom-Right) -> Asteroid -->
+                    <path class="orbit-path" d="M 770 380 C 700 400 630 410 590 390" stroke="rgba(234,179,8,0.3)" stroke-width="1.2" />
+                    <circle cx="770" cy="380" r="3.5" fill="#eab308" filter="url(#glowYellow)" />
+                    <circle cx="590" cy="390" r="3" fill="#eab308" filter="url(#glowYellow)" />
+                </svg>
+
+                <!-- Central Asteroid with orbital micro-particles -->
+                <div class="tech-asteroid-center" id="techAsteroidCore">
+                    <img src="assets/tech-asteroid.png" alt="Cosmic Tech Asteroid Core" class="asteroid-core-img" loading="lazy">
                 </div>
+
+                <!-- Cluster 1: AI & LLMs (Top Center-Left) -->
+                <div class="tech-cluster cluster-ai">
+                    <div class="cluster-tag text-purple">
+                        <span class="cluster-dot" style="background:#a855f7;"></span>
+                        <span>AI &amp; LLMs</span>
+                    </div>
+                    <div class="cluster-featured-row">
+                        <div class="tool-item tool-primary">
+                            <svg class="tool-icon-img" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A6.0651 6.0651 0 0 0 19.0192 19.818a5.9847 5.9847 0 0 0 3.9977-2.9001 6.0462 6.0462 0 0 0-.735-7.0968ZM8.7504 6.2574c.143-.3773.3444-.727.6045-1.0494a4.3214 4.3214 0 0 1 4.8693-1.3995 4.3243 4.3243 0 0 1 2.825 3.3284l-1.018.587-5.59-1.9365-1.6908-.53ZM2.8988 12.025c0-.629.1352-1.246.3956-1.8155a4.321 4.321 0 0 1 3.5186-2.5857 4.3243 4.3243 0 0 1 4.0957 1.5794l-1.018 1.7635-4.4822 5.0601-2.122-1.225A4.3204 4.3204 0 0 1 2.8988 12.025Zm12.35 6.0125a4.3243 4.3243 0 0 1-2.825-3.3284l1.018-.587 5.59 1.9365 1.6909.53a4.3214 4.3214 0 0 1-4.8693 1.3995c-.2601.3224-.4615.6721-.6046 1.0494Zm-6.495 1.0494c-.1431.3773-.3445.727-.6046 1.0494a4.3214 4.3214 0 0 1-4.8693-1.3995 4.3243 4.3243 0 0 1-2.825-3.3284l1.018-.587 5.59 1.9365c.6775.2125 1.2588.4239 1.6908.53Zm8.8142-6.52c0 .629-.1352 1.246-.3956 1.8155a4.3214 4.3214 0 0 1-3.5186 2.5857 4.3243 4.3243 0 0 1-4.0957-1.5794l1.018-1.7635 4.4822-5.06 2.122 1.225a4.3204 4.3204 0 0 1 .3877 2.7767Zm-6.5828-2.5647 1.018-1.7635 1.018 1.7635v3.527l-1.018 1.7635-1.018-1.7635v-3.527Z" />
+                            </svg>
+                            <span class="tool-name">OpenAI</span>
+                        </div>
+                        <div class="tool-item tool-primary">
+                            <span class="tool-icon-sym" style="font-size: 1.15rem; font-weight: 800;">✻</span>
+                            <span class="tool-name">Claude</span>
+                        </div>
+                    </div>
+                    <div class="cluster-sub-row">
+                        <div class="tool-pill"><span class="pill-sym">⌸</span> RAG</div>
+                        <div class="tool-pill"><span class="pill-sym">⚡</span> LangChain</div>
+                        <div class="tool-pill"><span class="pill-sym">◎</span> MCP</div>
+                    </div>
+                </div>
+
+                <!-- Cluster 2: Backend & APIs (Middle Left) -->
+                <div class="tech-cluster cluster-backend">
+                    <div class="cluster-tag text-green">
+                        <span class="cluster-dot" style="background:#10b981;"></span>
+                        <span>Backend &amp; APIs</span>
+                    </div>
+                    <div class="cluster-featured-row">
+                        <div class="tool-item tool-hero">
+                            <span class="tool-name tool-name-lg">django</span>
+                        </div>
+                    </div>
+                    <div class="cluster-two-col">
+                        <div class="cluster-col">
+                            <div class="tool-item tool-sub">
+                                <img src="https://cdn.simpleicons.org/postgresql/ffffff" alt="PostgreSQL" class="tool-icon-img" loading="lazy">
+                                <span class="tool-name">PostgreSQL</span>
+                            </div>
+                            <div class="tool-item tool-sub">
+                                <span class="tool-icon-sym">⚙</span>
+                                <span class="tool-name">REST APIs</span>
+                            </div>
+                            <div class="tool-item tool-sub">
+                                <span class="tool-icon-sym">⚡</span>
+                                <span class="tool-name">Webhooks</span>
+                            </div>
+                        </div>
+                        <div class="cluster-col">
+                            <div class="tool-item tool-sub">
+                                <span class="tool-icon-sym">🔒</span>
+                                <span class="tool-name">Auth</span>
+                            </div>
+                            <div class="tool-item tool-sub">
+                                <span class="tool-icon-sym">🛡</span>
+                                <span class="tool-name">RBAC</span>
+                            </div>
+                            <div class="tool-item tool-sub">
+                                <span class="tool-icon-sym">{ }</span>
+                                <span class="tool-name">JSON</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cluster 3: Full-Stack (Bottom Center-Left) -->
+                <div class="tech-cluster cluster-fullstack">
+                    <div class="cluster-tag text-blue">
+                        <span class="cluster-dot" style="background:#3b82f6;"></span>
+                        <span>Full-Stack</span>
+                    </div>
+                    <div class="cluster-featured-row">
+                        <div class="tool-item tool-primary">
+                            <img src="https://cdn.simpleicons.org/nextdotjs/ffffff" alt="Next.js" class="tool-icon-img" loading="lazy">
+                            <span class="tool-name">Next.js</span>
+                        </div>
+                        <div class="tool-item tool-primary">
+                            <img src="https://cdn.simpleicons.org/typescript/ffffff" alt="TypeScript" class="tool-icon-img" loading="lazy">
+                            <span class="tool-name">TypeScript</span>
+                        </div>
+                    </div>
+                    <div class="cluster-featured-row cluster-row-tight">
+                        <div class="tool-item tool-sub">
+                            <img src="https://cdn.simpleicons.org/react/ffffff" alt="React" class="tool-icon-img" loading="lazy">
+                            <span class="tool-name">React</span>
+                        </div>
+                        <div class="tool-item tool-sub">
+                            <img src="https://cdn.simpleicons.org/tailwindcss/ffffff" alt="Tailwind CSS" class="tool-icon-img" loading="lazy">
+                            <span class="tool-name">Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cluster 4: Automation (Top Right) -->
+                <div class="tech-cluster cluster-automation">
+                    <div class="cluster-tag text-orange">
+                        <span class="cluster-dot" style="background:#f97316;"></span>
+                        <span>Automation</span>
+                    </div>
+                    <div class="cluster-featured-row">
+                        <div class="tool-item tool-hero">
+                            <img src="https://cdn.simpleicons.org/n8n/ffffff" alt="n8n" class="tool-icon-img tool-n8n" loading="lazy">
+                            <span class="tool-name tool-name-lg">n8n</span>
+                        </div>
+                    </div>
+                    <div class="cluster-featured-row cluster-row-tight">
+                        <div class="tool-item tool-sub">
+                            <img src="https://cdn.simpleicons.org/make/ffffff" alt="Make" class="tool-icon-img" loading="lazy">
+                            <span class="tool-name">Make</span>
+                        </div>
+                        <div class="tool-item tool-sub">
+                            <img src="https://cdn.simpleicons.org/zapier/ffffff" alt="Zapier" class="tool-icon-img" loading="lazy">
+                            <span class="tool-name">Zapier</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cluster 5: Platforms & Integrations (Bottom Right) -->
+                <div class="tech-cluster cluster-platforms">
+                    <div class="cluster-tag text-yellow">
+                        <span class="cluster-dot" style="background:#eab308;"></span>
+                        <span>Platforms &amp; Integrations</span>
+                    </div>
+                    <div class="cluster-two-col">
+                        <div class="cluster-col">
+                            <div class="tool-item tool-sub">
+                                <img src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="WhatsApp" class="tool-icon-img" loading="lazy">
+                                <span class="tool-name">WhatsApp</span>
+                            </div>
+                            <div class="tool-item tool-sub">
+                                <svg class="tool-icon-img" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zM18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zM15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"/>
+                                </svg>
+                                <span class="tool-name">Slack</span>
+                            </div>
+                            <div class="tool-item tool-sub">
+                                <img src="https://cdn.simpleicons.org/hubspot/ffffff" alt="HubSpot" class="tool-icon-img" loading="lazy">
+                                <span class="tool-name">HubSpot</span>
+                            </div>
+                            <div class="tool-item tool-sub">
+                                <img src="https://cdn.simpleicons.org/airtable/ffffff" alt="Airtable" class="tool-icon-img" loading="lazy">
+                                <span class="tool-name">Airtable</span>
+                            </div>
+                        </div>
+                        <div class="cluster-col">
+                            <div class="tool-item tool-sub">
+                                <span class="tool-icon-sym" style="font-weight: 800;">V</span>
+                                <span class="tool-name">Vapi</span>
+                            </div>
+                            <div class="tool-item tool-sub">
+                                <img src="https://cdn.simpleicons.org/calendly/ffffff" alt="Calendly" class="tool-icon-img" loading="lazy">
+                                <span class="tool-name">Calendly</span>
+                            </div>
+                            <div class="tool-item tool-sub">
+                                <img src="https://cdn.simpleicons.org/googlecalendar/ffffff" alt="Google Calendar" class="tool-icon-img" loading="lazy">
+                                <span class="tool-name">Google Calendar</span>
+                            </div>
+                            <div class="tool-item tool-sub">
+                                <img src="https://cdn.simpleicons.org/supabase/ffffff" alt="Supabase" class="tool-icon-img" loading="lazy">
+                                <span class="tool-name">Supabase</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -866,10 +992,9 @@
         // Register ScrollTrigger
         gsap.registerPlugin(ScrollTrigger);
 
-        // Fade out the huge background text universally for all screen sizes
-        gsap.to(".bg-text", {
+        // Fade out the hero mountain background into About section
+        gsap.to([".hero-mountains-bg", ".bg-text"], {
             opacity: 0,
-            scale: 0.95,
             scrollTrigger: {
                 trigger: "#aboutSection",
                 start: "top 80%",
@@ -1297,7 +1422,7 @@
             });
         });
 
-        // Live Clock & Date — visitor's local time
+        // Live Clock & Date — visitor's local time (Matching Reference)
         function updateLocalTime() {
             const timeEl = document.getElementById('localTimeDisplay');
             const dateEl = document.getElementById('localDateDisplay');
@@ -1306,12 +1431,15 @@
             const now = new Date();
             timeEl.textContent = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
             if (dateEl) {
-                dateEl.textContent = now.toLocaleDateString('en-US', { weekday: 'short', day: '2-digit', month: 'short', year: 'numeric' });
+                const dateStr = now.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: '2-digit', year: 'numeric' });
+                dateEl.textContent = dateStr.toUpperCase();
             }
             if (tzEl) {
-                // Extract short timezone abbreviation e.g. "PKT", "EST", "BST"
-                const tz = now.toLocaleTimeString('en-US', { timeZoneName: 'short' }).split(' ').pop();
-                tzEl.textContent = tz;
+                // Display GMT offset e.g. GMT+5
+                const offsetMin = -now.getTimezoneOffset();
+                const sign = offsetMin >= 0 ? '+' : '-';
+                const hours = Math.floor(Math.abs(offsetMin) / 60);
+                tzEl.textContent = `GMT${sign}${hours}`;
             }
         }
         setInterval(updateLocalTime, 1000);
@@ -1332,25 +1460,37 @@
         }, { passive: true });
 
 
-        // ---- Tech Section ----
-        gsap.from('.tech-header-block', {
-            opacity: 0, y: 30, duration: 1.2, ease: 'power3.out',
-            scrollTrigger: { trigger: '#techSection', start: 'top 85%', once: true }
+        // ---- Tech Section (Constellation Reveal) ----
+        gsap.from('.tech-left-col', {
+            opacity: 0,
+            x: -30,
+            duration: 1.1,
+            ease: 'power3.out',
+            scrollTrigger: { trigger: '#techSection', start: 'top 80%', once: true }
         });
-        gsap.utils.toArray('.tech-card').forEach((card, i) => {
-            const dir = [
-                { x: -50, y: 0 }, { x: 0, y: 50 }, { x: 50, y: 0 },
-                { x: -30, y: 30 }, { x: 0, y: 60 }, { x: 30, y: 30 }
-            ][i % 6];
-            gsap.from(card, {
-                opacity: 0, x: dir.x, y: dir.y + 20,
-                duration: 1.0, ease: 'power3.out', delay: i * 0.08,
-                scrollTrigger: { trigger: '.tech-mosaic', start: 'top 85%', once: true }
+        gsap.from('#techAsteroidCore', {
+            opacity: 0,
+            scale: 0.8,
+            duration: 1.3,
+            ease: 'back.out(1.4)',
+            scrollTrigger: { trigger: '#techSection', start: 'top 75%', once: true }
+        });
+        gsap.from('.tech-orbit-svg', {
+            opacity: 0,
+            duration: 1.5,
+            ease: 'power2.out',
+            scrollTrigger: { trigger: '#techSection', start: 'top 75%', once: true }
+        });
+        gsap.utils.toArray('.tech-cluster').forEach((cluster, i) => {
+            gsap.from(cluster, {
+                opacity: 0,
+                y: 25,
+                duration: 0.9,
+                delay: 0.15 + i * 0.1,
+                ease: 'power3.out',
+                scrollTrigger: { trigger: '#techSection', start: 'top 75%', once: true }
             });
         });
-
-        gsap.from('.tech-left', { opacity: 0, x: -40, duration: 1.2, ease: 'power3.out', scrollTrigger: { trigger: '#techSection', start: 'top 80%', once: true } });
-        gsap.from('.tech-stage-wrap', { opacity: 0, x: 60, duration: 1.3, ease: 'power3.out', scrollTrigger: { trigger: '#techSection', start: 'top 80%', once: true } });
     </script>
 
     <!-- SVG WAVE DIVIDER — Between Tech and Contact -->
