@@ -2028,7 +2028,40 @@ body.light-theme .hero-image {
 }
 
 .edu-top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
     margin-bottom: 5rem;
+}
+
+.edu-resume-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 1.1rem;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--text-white);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.edu-resume-pill:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    color: var(--primary-blue);
+}
+
+.edu-resume-pill svg {
+    width: 14px;
+    height: 14px;
 }
 
 .edu-eyebrow {
@@ -2602,6 +2635,20 @@ body.light-theme .bento-cta-btn:hover {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 4px;
+}
+
+.htb-resume-link {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.htb-resume-link:hover {
+    color: var(--primary-blue);
 }
 
 .status-dot {
