@@ -3529,6 +3529,51 @@ body.light-theme .wib-card-title {
     color: var(--primary-blue);
 }
 
+/* Cal.com Booking Card */
+.cic-cal-card {
+    text-decoration: none;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.28);
+    cursor: pointer;
+}
+
+.cic-cal-card:hover {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(255, 255, 255, 0.06) 100%);
+    border-color: rgba(59, 130, 246, 0.5);
+    transform: translateX(4px);
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.15);
+}
+
+.cic-icon-cal {
+    background: rgba(59, 130, 246, 0.15);
+    color: var(--primary-blue);
+}
+
+.cic-cal-text {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.cic-cal-arrow {
+    display: inline-block;
+    transition: transform 0.2s ease;
+    color: var(--primary-blue);
+    margin-left: 2px;
+}
+
+.cic-cal-card:hover .cic-cal-arrow {
+    transform: translate(2px, -2px);
+}
+
+body.light-theme .cic-cal-card {
+    background: rgba(59, 130, 246, 0.06);
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+body.light-theme .cic-cal-text {
+    color: #1e293b;
+}
+
 .contact-avail {
     display: flex;
     align-items: center;

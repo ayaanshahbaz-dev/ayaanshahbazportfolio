@@ -1771,7 +1771,7 @@
                         <span class="faq-icon">+</span>
                     </summary>
                     <div class="faq-answer">
-                        <p>Yes. I am based in Pakistan (Punjab) and collaborate extensively with <strong>international clients, startups, and distributed engineering teams worldwide</strong>. I am available for contract development, freelance AI automation engineering, full-stack software development, and technical consulting across US, UK, European, and global timezones.</p>
+                        <p>Yes. I am based in Pakistan (Punjab) and collaborate extensively with <strong>international clients, startups, and distributed engineering teams worldwide</strong>. I am available for contract development, freelance AI automation engineering, full-stack software development, and technical consulting across US, UK, European, and global timezones. You can book a direct 15-minute scope call or drop a message to get started.</p>
                     </div>
                 </details>
             </div>
@@ -1802,11 +1802,23 @@
             <div class="contact-header">
                 <div class="about-eyebrow text-blue contact-eyebrow">GET IN TOUCH</div>
                 <h2 class="contact-headline">Let's build<br>something <span class="ch-accent">great.</span></h2>
-                <p class="contact-sub">Have a project in mind? I'd love to hear about it.<br>Drop me a message and I'll
-                    get back within 24 hours.</p>
+                <p class="contact-sub">Have a project in mind? I'd love to hear about it.<br>Drop me a message below or schedule a direct 15-minute scope call.</p>
             </div>
             <div class="contact-grid">
                 <div class="contact-info-col">
+                    <a href="https://cal.com/ayaanshahbaz/15min" 
+                       data-cal-link="ayaanshahbaz/15min" 
+                       data-cal-namespace="15min" 
+                       data-cal-config='{"layout":"month_view","theme":"dark"}'
+                       class="contact-info-card cic-cal-card" 
+                       id="bookCallBtn"
+                       target="_blank" rel="noopener noreferrer">
+                        <div class="cic-icon cic-icon-cal"><i data-lucide="calendar"></i></div>
+                        <div class="cic-text">
+                            <span class="cic-label">Direct Calendar</span>
+                            <span class="cic-value cic-cal-text">Book 15-Min Scope Call <span class="cic-cal-arrow">↗</span></span>
+                        </div>
+                    </a>
                     <div class="contact-info-card">
                         <div class="cic-icon"><i data-lucide="mail"></i></div>
                         <div class="cic-text">
@@ -1902,6 +1914,7 @@
                     <a href="#servicesSection">Services</a>
                     <a href="#techSection">Tech</a>
                     <a href="#contactSection">Contact</a>
+                    <a href="https://cal.com/ayaanshahbaz/15min" data-cal-link="ayaanshahbaz/15min" data-cal-namespace="15min" data-cal-config='{"layout":"month_view","theme":"dark"}' target="_blank" rel="noopener noreferrer">Book Call ↗</a>
                     <a href="/automation-library" style="color: var(--primary-blue); opacity: 1;">Automation Library
                         ↗</a>
                 </nav>
@@ -2037,6 +2050,45 @@
                 form.reset();
             }
         }
+    </script>
+
+    <!-- Cal.com 15-Min Booking Embed (Async & Non-blocking) -->
+    <script type="text/javascript">
+        (function (C, A, L) {
+            let p = function (a, ar) { a.q.push(ar); };
+            let d = C.document;
+            C.Cal = C.Cal || function () {
+                let cal = C.Cal;
+                let ar = arguments;
+                if (!cal.loaded) {
+                    cal.ns = {};
+                    cal.q = cal.q || [];
+                    d.head.appendChild(d.createElement("script")).src = A;
+                    cal.loaded = true;
+                }
+                if (ar[0] === L) {
+                    const api = function () { p(api, arguments); };
+                    const namespace = ar[1];
+                    api.q = api.q || [];
+                    if (typeof namespace === "string") {
+                        cal.ns[namespace] = cal.ns[namespace] || api;
+                        p(cal.ns[namespace], ar);
+                        p(cal, ["initNamespace", namespace]);
+                    } else p(cal, ar);
+                    return;
+                }
+                p(cal, ar);
+            };
+        })(window, "https://app.cal.com/embed/embed.js", "init");
+
+        Cal("init", "15min", { origin: "https://cal.com" });
+        Cal.ns["15min"]("ui", {
+            "styles": { "branding": { "brandColor": "#3b82f6" } },
+            "hideEventTypeDetails": false,
+            "layout": "month_view",
+            "theme": "dark"
+        });
+        Cal.ns["15min"]("preload", { calLink: "ayaanshahbaz/15min" });
     </script>
 
 </body>
