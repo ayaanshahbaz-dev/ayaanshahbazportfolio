@@ -12,6 +12,17 @@
       ],
       "destination": "https://ayaanshahbaz.space/$1",
       "statusCode": 301
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.ayaanshahbaz.space"
+        }
+      ],
+      "destination": "https://ayaanshahbaz.space/$1",
+      "statusCode": 301
     }
   ],
   "headers": [
