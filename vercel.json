@@ -23,6 +23,51 @@
       ],
       "destination": "https://ayaanshahbaz.space/$1",
       "statusCode": 301
+    },
+    {
+      "source": "/media",
+      "has": [
+        {
+          "type": "host",
+          "value": "ayaanshahbaz.space"
+        }
+      ],
+      "destination": "https://media.ayaanshahbaz.space",
+      "statusCode": 301
+    },
+    {
+      "source": "/media.html",
+      "has": [
+        {
+          "type": "host",
+          "value": "ayaanshahbaz.space"
+        }
+      ],
+      "destination": "https://media.ayaanshahbaz.space",
+      "statusCode": 301
+    },
+    {
+      "source": "/media",
+      "has": [
+        {
+          "type": "host",
+          "value": "media.ayaanshahbaz.space"
+        }
+      ],
+      "destination": "/",
+      "statusCode": 301
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "media.ayaanshahbaz.space"
+        }
+      ],
+      "destination": "/media.html"
     }
   ],
   "headers": [
