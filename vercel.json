@@ -1,92 +1,104 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "redirects": [
+  "version": 2,
+  "routes": [
     {
-      "source": "/(.*)",
+      "src": "/(.*)",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Referrer-Policy": "strict-origin-when-cross-origin"
+      },
+      "continue": true
+    },
+    {
+      "src": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "ayaanshahbaz.vercel.app"
         }
       ],
-      "destination": "https://ayaanshahbaz.space/$1",
-      "statusCode": 301
+      "headers": {
+        "Location": "https://ayaanshahbaz.space/$1"
+      },
+      "status": 301
     },
     {
-      "source": "/(.*)",
+      "src": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "www.ayaanshahbaz.space"
         }
       ],
-      "destination": "https://ayaanshahbaz.space/$1",
-      "statusCode": 301
+      "headers": {
+        "Location": "https://ayaanshahbaz.space/$1"
+      },
+      "status": 301
     },
     {
-      "source": "/media",
+      "src": "^/media/?$",
       "has": [
         {
           "type": "host",
           "value": "ayaanshahbaz.space"
         }
       ],
-      "destination": "https://media.ayaanshahbaz.space",
-      "statusCode": 301
+      "headers": {
+        "Location": "https://media.ayaanshahbaz.space"
+      },
+      "status": 301
     },
     {
-      "source": "/media.html",
+      "src": "^/media\\.html$",
       "has": [
         {
           "type": "host",
           "value": "ayaanshahbaz.space"
         }
       ],
-      "destination": "https://media.ayaanshahbaz.space",
-      "statusCode": 301
+      "headers": {
+        "Location": "https://media.ayaanshahbaz.space"
+      },
+      "status": 301
     },
     {
-      "source": "/media",
+      "src": "^/media(/|\\.html)?$",
       "has": [
         {
           "type": "host",
           "value": "media.ayaanshahbaz.space"
         }
       ],
-      "destination": "/",
-      "statusCode": 301
-    }
-  ],
-  "rewrites": [
+      "headers": {
+        "Location": "/"
+      },
+      "status": 301
+    },
     {
-      "source": "/",
+      "src": "^/$",
       "has": [
         {
           "type": "host",
           "value": "media.ayaanshahbaz.space"
         }
       ],
-      "destination": "/media.html"
-    }
-  ],
-  "headers": [
+      "dest": "/media.html"
+    },
     {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        }
-      ]
+      "handle": "filesystem"
+    },
+    {
+      "src": "^/book-a-meeting/?$",
+      "dest": "/book-a-meeting.html"
+    },
+    {
+      "src": "^/automation-library/?$",
+      "dest": "/automation-library.html"
+    },
+    {
+      "src": "^/media/?$",
+      "dest": "/media.html"
     }
   ]
 }
