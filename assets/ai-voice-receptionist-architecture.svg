@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
+  <defs>
+    <radialGradient id="voiceBgGrad" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#191322" />
+      <stop offset="100%" stop-color="#0a0a0d" />
+    </radialGradient>
+    <linearGradient id="voiceLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(168,85,247,0.2)" />
+      <stop offset="50%" stop-color="rgba(236,72,153,0.8)" />
+      <stop offset="100%" stop-color="rgba(59,130,246,0.8)" />
+    </linearGradient>
+    <linearGradient id="voiceCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.06)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0.02)" />
+    </linearGradient>
+    <filter id="voiceGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="540" fill="url(#voiceBgGrad)" />
+  <rect width="960" height="540" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="2" />
+
+  <!-- Grid pattern overlay -->
+  <g opacity="0.08" stroke="#ffffff" stroke-width="1">
+    <line x1="120" y1="0" x2="120" y2="540" />
+    <line x1="240" y1="0" x2="240" y2="540" />
+    <line x1="360" y1="0" x2="360" y2="540" />
+    <line x1="480" y1="0" x2="480" y2="540" />
+    <line x1="600" y1="0" x2="600" y2="540" />
+    <line x1="720" y1="0" x2="720" y2="540" />
+    <line x1="840" y1="0" x2="840" y2="540" />
+    <line x1="0" y1="135" x2="960" y2="135" />
+    <line x1="0" y1="270" x2="960" y2="270" />
+    <line x1="0" y1="405" x2="960" y2="405" />
+  </g>
+
+  <!-- Ambient Glow Circles -->
+  <circle cx="240" cy="270" r="170" fill="rgba(168,85,247,0.08)" filter="url(#voiceGlow)" />
+  <circle cx="720" cy="270" r="170" fill="rgba(236,72,153,0.08)" filter="url(#voiceGlow)" />
+
+  <!-- Header Badge -->
+  <g transform="translate(60, 48)">
+    <rect width="270" height="30" rx="15" fill="rgba(168,85,247,0.15)" stroke="rgba(168,85,247,0.35)" stroke-width="1" />
+    <circle cx="16" cy="15" r="4" fill="#C084FC" />
+    <text x="30" y="20" fill="#C084FC" font-family="'Outfit', sans-serif" font-size="11" font-weight="700" letter-spacing="2">VOICE AI RECEPTIONIST ARCHITECTURE</text>
+  </g>
+
+  <!-- Title & Meta -->
+  <text x="60" y="112" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="22" font-weight="800" letter-spacing="-0.5">Real-Time Conversational Voice Agent &amp; Booking System</text>
+  <text x="60" y="132" fill="rgba(255,255,255,0.45)" font-family="'Outfit', sans-serif" font-size="12">Twilio Telephony → Vapi Low-Latency LLM Pipeline → Tool-Calling Booking Webhooks → Calendar Sync</text>
+
+  <!-- Connective flow lines -->
+  <path d="M 220 280 L 320 280" stroke="url(#voiceLineGrad)" stroke-width="2.5" stroke-dasharray="4 4" />
+  <path d="M 460 280 L 560 280" stroke="url(#voiceLineGrad)" stroke-width="2.5" stroke-dasharray="4 4" />
+  <path d="M 700 280 L 800 280" stroke="url(#voiceLineGrad)" stroke-width="2.5" stroke-dasharray="4 4" />
+
+  <!-- Node 1: Inbound Call & Audio Stream -->
+  <g transform="translate(80, 200)">
+    <rect width="140" height="160" rx="14" fill="url(#voiceCardGrad)" stroke="rgba(168,85,247,0.25)" stroke-width="1.2" />
+    <rect x="14" y="16" width="36" height="36" rx="8" fill="rgba(168,85,247,0.15)" />
+    <!-- Phone / Mic icon -->
+    <path d="M26 24 C24 24 22 26 22 28 C22 36 28 42 36 42 C38 42 40 40 40 38 L37 34 L33 35 C30 33 29 32 27 29 L28 25 Z" fill="#C084FC" />
+    <text x="14" y="78" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="14" font-weight="700">01. Phone Stream</text>
+    <text x="14" y="98" fill="rgba(255,255,255,0.4)" font-family="'Outfit', sans-serif" font-size="10">Twilio SIP Trunking</text>
+    <text x="14" y="114" fill="rgba(255,255,255,0.4)" font-family="'Outfit', sans-serif" font-size="10">WebRTC Bi-Directional</text>
+    <text x="14" y="130" fill="rgba(255,255,255,0.4)" font-family="'Outfit', sans-serif" font-size="10">Noise Suppressor</text>
+  </g>
+
+  <!-- Node 2: Vapi Voice AI Agent -->
+  <g transform="translate(320, 200)">
+    <rect width="140" height="160" rx="14" fill="url(#voiceCardGrad)" stroke="rgba(236,72,153,0.3)" stroke-width="1.2" />
+    <rect x="14" y="16" width="36" height="36" rx="8" fill="rgba(236,72,153,0.15)" />
+    <!-- Audio Waveform -->
+    <line x1="24" y1="34" x2="24" y2="34" stroke="#F472B6" stroke-width="3" stroke-linecap="round" />
+    <line x1="28" y1="28" x2="28" y2="40" stroke="#F472B6" stroke-width="3" stroke-linecap="round" />
+    <line x1="32" y1="24" x2="32" y2="44" stroke="#F472B6" stroke-width="3" stroke-linecap="round" />
+    <line x1="36" y1="29" x2="36" y2="39" stroke="#F472B6" stroke-width="3" stroke-linecap="round" />
+    <line x1="40" y1="33" x2="40" y2="35" stroke="#F472B6" stroke-width="3" stroke-linecap="round" />
+    <text x="14" y="78" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="14" font-weight="700">02. Vapi Engine</text>
+    <text x="14" y="98" fill="rgba(255,255,255,0.4)" font-family="'Outfit', sans-serif" font-size="10">Deepgram STT (&lt;300ms)</text>
+    <text x="14" y="114" fill="rgba(255,255,255,0.4)" font-family="'Outfit', sans-serif" font-size="10">Cartesia TTS Natural</text>
+    <text x="14" y="130" fill="rgba(255,255,255,0.4)" font-family="'Outfit', sans-serif" font-size="10">Sub-second Latency</text>
+  </g>
+
+  <!-- Node 3: Intent & Tool-Calling -->
+  <g transform="translate(560, 200)">
+    <rect width="140" height="160" rx="14" fill="url(#voiceCardGrad)" stroke="rgba(59,130,246,0.25)" stroke-width="1.2" />
+    <rect x="14" y="16" width="36" height="36" rx="8" fill="rgba(59,130,246,0.15)" />
+    <!-- Bot / Brain / Tool icon -->
+    <rect x="25" y="27" width="14" height="14" rx="3" fill="none" stroke="#60A5FA" stroke-width="1.8" />
+    <circle cx="29" cy="33" r="1.5" fill="#60A5FA" />
+    <circle cx="35" cy="33" r="1.5" fill="#60A5FA" />
+    <text x="14" y="78" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="14" font-weight="700">03. Tool Calling</text>
+    <text x="14" y="98" fill="rgba(255,255,255,0.4)" font-family="'Outfit', sans-serif" font-size="10">Availability Lookups</text>
+    <text x="14" y="114" fill="rgba(255,255,255,0.4)" font-family="'Outfit', sans-serif" font-size="10">Slot Conflict Logic</text>
+    <text x="14" y="130" fill="rgba(255,255,255,0.4)" font-family="'Outfit', sans-serif" font-size="10">Live Webhook Payloads</text>
+  </g>
+
+  <!-- Node 4: Calendar & Confirmation -->
+  <g transform="translate(800, 200)">
+    <rect width="130" height="160" rx="14" fill="url(#voiceCardGrad)" stroke="rgba(34,197,94,0.25)" stroke-width="1.2" />
+    <rect x="14" y="16" width="36" height="36" rx="8" fill="rgba(34,197,94,0.15)" />
+    <!-- Calendar icon -->
+    <rect x="24" y="26" width="16" height="15" rx="3" fill="none" stroke="#4ADE80" stroke-width="1.5" />
+    <line x1="28" y1="23" x2="28" y2="27" stroke="#4ADE80" stroke-width="1.5" />
+    <line x1="36" y1="23" x2="36" y2="27" stroke="#4ADE80" stroke-width="1.5" />
+    <text x="14" y="78" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="14" font-weight="700">04. Calendly</text>
+    <text x="14" y="98" fill="rgba(255,255,255,0.4)" font-family="'Outfit', sans-serif" font-size="10">Appointment Lock</text>
+    <text x="14" y="114" fill="rgba(255,255,255,0.4)" font-family="'Outfit', sans-serif" font-size="10">SMS Confirmation</text>
+    <text x="14" y="130" fill="rgba(255,255,255,0.4)" font-family="'Outfit', sans-serif" font-size="10">Doctor Calendar Sync</text>
+  </g>
+
+  <!-- Bottom Metric Bar -->
+  <g transform="translate(80, 420)">
+    <rect width="850" height="60" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" />
+    
+    <text x="40" y="36" fill="#C084FC" font-family="'Outfit', sans-serif" font-size="16" font-weight="800">&lt;650ms</text>
+    <text x="115" y="36" fill="rgba(255,255,255,0.5)" font-family="'Outfit', sans-serif" font-size="11">Voice-to-Voice Response Latency</text>
+
+    <line x1="310" y1="15" x2="310" y2="45" stroke="rgba(255,255,255,0.08)" />
+
+    <text x="350" y="36" fill="#F472B6" font-family="'Outfit', sans-serif" font-size="16" font-weight="800">24/7</text>
+    <text x="400" y="36" fill="rgba(255,255,255,0.5)" font-family="'Outfit', sans-serif" font-size="11">Zero Missed Inbound Patient Calls</text>
+
+    <line x1="580" y1="15" x2="580" y2="45" stroke="rgba(255,255,255,0.08)" />
+
+    <text x="620" y="36" fill="#4ADE80" font-family="'Outfit', sans-serif" font-size="16" font-weight="800">0%</text>
+    <text x="660" y="36" fill="rgba(255,255,255,0.5)" font-family="'Outfit', sans-serif" font-size="11">Double-Booking Conflict Rate</text>
+  </g>
+</svg>

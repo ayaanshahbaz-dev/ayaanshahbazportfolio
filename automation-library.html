@@ -670,12 +670,12 @@
                 pipelines, and workflow automations that solve actual business problems.</p>
             <div class="al-hero-stat-row" id="alStats">
                 <div class="al-hero-stat">
-                    <span class="al-hero-stat-num">10</span>
-                    <span class="al-hero-stat-label">Automations</span>
+                    <span class="al-hero-stat-num">13</span>
+                    <span class="al-hero-stat-label">Case Studies</span>
                 </div>
                 <div class="al-stat-divider"></div>
                 <div class="al-hero-stat">
-                    <span class="al-hero-stat-num">5+</span>
+                    <span class="al-hero-stat-num">6+</span>
                     <span class="al-hero-stat-label">Categories</span>
                 </div>
                 <div class="al-stat-divider"></div>
@@ -689,9 +689,10 @@
 
     <!-- ===== FILTER BAR ===== -->
     <div class="al-filter-bar" id="alFilterBar">
-        <button class="al-filter-btn active" data-filter="all">All</button>
+        <button class="al-filter-btn active" data-filter="all">All (13)</button>
+        <button class="al-filter-btn" data-filter="full-stack">Full-Stack SaaS</button>
         <button class="al-filter-btn" data-filter="ai-agent">AI Agents</button>
-        <button class="al-filter-btn" data-filter="n8n">n8n</button>
+        <button class="al-filter-btn" data-filter="n8n">n8n Workflows</button>
         <button class="al-filter-btn" data-filter="lead-gen">Lead Gen</button>
         <button class="al-filter-btn" data-filter="content">Content</button>
         <button class="al-filter-btn" data-filter="market">Market Intel</button>
@@ -701,36 +702,133 @@
     <main class="al-grid-section">
         <div class="al-grid" id="alGrid">
 
-            <!-- Card 01 -->
-            <article class="al-card" data-category="content n8n ai-agent">
+            <!-- Card 01: OrvinHQ -->
+            <article class="al-card" data-category="full-stack" data-case-study="orvinhq" tabindex="0" role="button" aria-label="Open OrvinHQ case study">
                 <div class="al-card-img-wrap">
-                    <img src="n8n-library/Autonomous Content Intelligence System.jpg"
-                        alt="Autonomous Content Intelligence System workflow" loading="lazy">
+                    <img src="content/Images/Selected Work/OrvinHQ.png" alt="OrvinHQ workplace management platform interface" loading="lazy" style="object-fit: contain; padding: 12px; background: #111318;">
                     <span class="al-card-num">01</span>
                 </div>
                 <div class="al-card-body">
-                    <span class="al-card-category">Content · AI Agent</span>
-                    <h2 class="al-card-title">Autonomous Content Intelligence System</h2>
+                    <span class="al-card-category">Full-Stack SaaS · HRIS</span>
+                    <h2 class="al-card-title">OrvinHQ</h2>
+                    <p class="al-card-desc">Unified workplace operations platform centralizing team directory, daily attendance, leave scheduling, and project milestones with enterprise BOLA security and sub-second presence tracking.</p>
+                    <div class="al-card-tags">
+                        <span class="al-tag">Django 6.1</span>
+                        <span class="al-tag">Next.js 16</span>
+                        <span class="al-tag">PostgreSQL</span>
+                        <span class="al-tag">TypeScript</span>
+                        <span class="al-tag">Tailwind</span>
+                    </div>
+                    <div class="al-card-cta-row">
+                        <span class="al-card-read-link">Read Full Case Study ↗</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 02: AURA AI -->
+            <article class="al-card" data-category="ai-agent n8n" data-case-study="aura-ai" tabindex="0" role="button" aria-label="Open AURA AI case study">
+                <div class="al-card-img-wrap">
+                    <img src="content/Images/Selected Work/Aura.png" alt="AURA AI RAG knowledge assistant interface" loading="lazy">
+                    <span class="al-card-num">02</span>
+                </div>
+                <div class="al-card-body">
+                    <span class="al-card-category">RAG · AI Agent · BI</span>
+                    <h2 class="al-card-title">AURA AI</h2>
+                    <p class="al-card-desc">RAG-powered knowledge assistant connecting internal documentation, qualifying inbound prospects, and scheduling appointments directly into Google Calendar in under 3 seconds.</p>
+                    <div class="al-card-tags">
+                        <span class="al-tag">RAG</span>
+                        <span class="al-tag">AI Agent</span>
+                        <span class="al-tag">MCP</span>
+                        <span class="al-tag">n8n</span>
+                        <span class="al-tag">Calendar API</span>
+                    </div>
+                    <div class="al-card-cta-row">
+                        <span class="al-card-read-link">Read Full Case Study ↗</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 03: Convoo AI -->
+            <article class="al-card" data-category="full-stack ai-agent" data-case-study="convoo-ai" tabindex="0" role="button" aria-label="Open Convoo AI case study">
+                <div class="al-card-img-wrap">
+                    <img src="content/Images/Selected Work/Convoo.png" alt="Convoo AI chat platform interface" loading="lazy">
+                    <span class="al-card-num">03</span>
+                </div>
+                <div class="al-card-body">
+                    <span class="al-card-category">Conversational AI · SSE</span>
+                    <h2 class="al-card-title">Convoo AI</h2>
+                    <p class="al-card-desc">Full-stack conversational AI platform built with persistent dialogue memory, zero-lag SSE response streaming, JWT auth, and automated live web search retrieval.</p>
+                    <div class="al-card-tags">
+                        <span class="al-tag">Django</span>
+                        <span class="al-tag">SSE Stream</span>
+                        <span class="al-tag">Next.js</span>
+                        <span class="al-tag">JWT Auth</span>
+                        <span class="al-tag">Live Search</span>
+                    </div>
+                    <div class="al-card-cta-row">
+                        <span class="al-card-read-link">Read Full Case Study ↗</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 04: Autonomous Content Intelligence -->
+            <article class="al-card" data-category="content n8n ai-agent" data-case-study="content-intelligence" tabindex="0" role="button" aria-label="Open Autonomous Content Intelligence System case study">
+                <div class="al-card-img-wrap">
+                    <img src="content/Images/Selected Work/Autonomous Content Intelligence System.jpg"
+                        alt="Autonomous Content Intelligence System workflow" loading="lazy">
+                    <span class="al-card-num">04</span>
+                </div>
+                <div class="al-card-body">
+                    <span class="al-card-category">Content · Multi-Agent · RAG</span>
+                    <h2 class="al-card-title">Autonomous Content Intelligence</h2>
                     <p class="al-card-desc">An AI-powered content research and generation platform that discovers
                         trending discussions, analyzes audience interests, generates content assets, stores
                         organizational memory, and delivers ready-to-publish content automatically through a fully
                         automated workflow.</p>
                     <div class="al-card-tags">
                         <span class="al-tag">n8n</span>
-                        <span class="al-tag">AI Agent</span>
+                        <span class="al-tag">Multi-Agent</span>
                         <span class="al-tag">RAG</span>
                         <span class="al-tag">Slack</span>
                         <span class="al-tag">Content</span>
                     </div>
+                    <div class="al-card-cta-row">
+                        <span class="al-card-read-link">Read Full Case Study ↗</span>
+                    </div>
                 </div>
             </article>
 
-            <!-- Card 02 -->
-            <article class="al-card" data-category="ai-agent n8n">
+            <!-- Card 05: Dental Clinic Receptionist -->
+            <article class="al-card" data-category="ai-agent n8n" data-case-study="dental-receptionist" tabindex="0" role="button" aria-label="Open AI Dental Clinic Receptionist case study">
+                <div class="al-card-img-wrap">
+                    <img src="content/Images/Selected Work/AI-Powered Dental Clinic Receptionist Automation.jpg"
+                        alt="AI-Powered Dental Clinic Receptionist Automation" loading="lazy">
+                    <span class="al-card-num">05</span>
+                </div>
+                <div class="al-card-body">
+                    <span class="al-card-category">WhatsApp · Healthcare AI</span>
+                    <h2 class="al-card-title">AI-Powered Dental Clinic Receptionist</h2>
+                    <p class="al-card-desc">Automating patient inquiries, appointment scheduling, reminders, and clinic
+                        operations through WhatsApp, AI, Google Sheets, and n8n. Replaces a full-time receptionist with
+                        a 24/7 intelligent agent.</p>
+                    <div class="al-card-tags">
+                        <span class="al-tag">WhatsApp</span>
+                        <span class="al-tag">n8n</span>
+                        <span class="al-tag">Google Sheets</span>
+                        <span class="al-tag">Calendar API</span>
+                    </div>
+                    <div class="al-card-cta-row">
+                        <span class="al-card-read-link">Read Full Case Study ↗</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 06: AI Customer Support -->
+            <article class="al-card" data-category="ai-agent n8n" data-case-study="ai-customer-support" tabindex="0" role="button" aria-label="Open AI Customer Support Automation case study">
                 <div class="al-card-img-wrap">
                     <img src="n8n-library/ai-support-automation.jpg" alt="AI Customer Support Automation"
                         loading="lazy">
-                    <span class="al-card-num">02</span>
+                    <span class="al-card-num">06</span>
                 </div>
                 <div class="al-card-body">
                     <span class="al-card-category">AI Agent · Support</span>
@@ -744,37 +842,18 @@
                         <span class="al-tag">n8n</span>
                         <span class="al-tag">Ticketing</span>
                     </div>
-                </div>
-            </article>
-
-            <!-- Card 03 -->
-            <article class="al-card" data-category="ai-agent n8n">
-                <div class="al-card-img-wrap">
-                    <img src="n8n-library/AI-Powered Dental Clinic Receptionist Automation.jpg"
-                        alt="AI-Powered Dental Clinic Receptionist Automation" loading="lazy">
-                    <span class="al-card-num">03</span>
-                </div>
-                <div class="al-card-body">
-                    <span class="al-card-category">AI Agent · Healthcare</span>
-                    <h2 class="al-card-title">AI-Powered Dental Clinic Receptionist</h2>
-                    <p class="al-card-desc">Automating patient inquiries, appointment scheduling, reminders, and clinic
-                        operations through WhatsApp, AI, Google Sheets, and n8n. Replaces a full-time receptionist with
-                        a 24/7 intelligent agent.</p>
-                    <div class="al-card-tags">
-                        <span class="al-tag">WhatsApp</span>
-                        <span class="al-tag">n8n</span>
-                        <span class="al-tag">Google Sheets</span>
-                        <span class="al-tag">AI</span>
+                    <div class="al-card-cta-row">
+                        <span class="al-card-read-link">Read Full Case Study ↗</span>
                     </div>
                 </div>
             </article>
 
-            <!-- Card 04 -->
-            <article class="al-card" data-category="lead-gen n8n">
+            <!-- Card 07: Cold Email & Lead Gen -->
+            <article class="al-card" data-category="lead-gen n8n" data-case-study="cold-email-lead-gen" tabindex="0" role="button" aria-label="Open AI Cold Email & Lead Generation case study">
                 <div class="al-card-img-wrap">
                     <img src="n8n-library/lead-generation-cold-email.jpg" alt="AI Cold Email and Lead Generation System"
                         loading="lazy">
-                    <span class="al-card-num">04</span>
+                    <span class="al-card-num">07</span>
                 </div>
                 <div class="al-card-body">
                     <span class="al-card-category">Lead Gen · Outreach</span>
@@ -788,15 +867,18 @@
                         <span class="al-tag">Lead Scraping</span>
                         <span class="al-tag">Personalization</span>
                     </div>
+                    <div class="al-card-cta-row">
+                        <span class="al-card-read-link">Read Full Case Study ↗</span>
+                    </div>
                 </div>
             </article>
 
-            <!-- Card 05 -->
-            <article class="al-card" data-category="market n8n">
+            <!-- Card 08: Real-Time Market Intelligence -->
+            <article class="al-card" data-category="market n8n" data-case-study="market-intelligence" tabindex="0" role="button" aria-label="Open Real-Time Market Intelligence case study">
                 <div class="al-card-img-wrap">
                     <img src="n8n-library/market-news-intelligence.jpg" alt="Real-Time Market Intelligence System"
                         loading="lazy">
-                    <span class="al-card-num">05</span>
+                    <span class="al-card-num">08</span>
                 </div>
                 <div class="al-card-body">
                     <span class="al-card-category">Market Intel · Finance</span>
@@ -811,14 +893,17 @@
                         <span class="al-tag">Slack</span>
                         <span class="al-tag">n8n</span>
                     </div>
+                    <div class="al-card-cta-row">
+                        <span class="al-card-read-link">Read Full Case Study ↗</span>
+                    </div>
                 </div>
             </article>
 
-            <!-- Card 06 -->
-            <article class="al-card" data-category="lead-gen n8n">
+            <!-- Card 09: CRM Lead Pipeline -->
+            <article class="al-card" data-category="lead-gen n8n" data-case-study="crm-lead-pipeline" tabindex="0" role="button" aria-label="Open CRM Lead Pipeline Automation case study">
                 <div class="al-card-img-wrap">
                     <img src="n8n-library/crm-lead-pipeline.jpg" alt="CRM Lead Pipeline Automation" loading="lazy">
-                    <span class="al-card-num">06</span>
+                    <span class="al-card-num">09</span>
                 </div>
                 <div class="al-card-body">
                     <span class="al-card-category">Lead Gen · CRM</span>
@@ -832,15 +917,18 @@
                         <span class="al-tag">AI Scoring</span>
                         <span class="al-tag">Follow-up</span>
                     </div>
+                    <div class="al-card-cta-row">
+                        <span class="al-card-read-link">Read Full Case Study ↗</span>
+                    </div>
                 </div>
             </article>
 
-            <!-- Card 07 -->
-            <article class="al-card" data-category="content n8n">
+            <!-- Card 10: Instagram Content Automation -->
+            <article class="al-card" data-category="content n8n" data-case-study="instagram-automation" tabindex="0" role="button" aria-label="Open Instagram Content Automation case study">
                 <div class="al-card-img-wrap">
                     <img src="n8n-library/content-automation-instagram.jpg" alt="Instagram Content Automation"
                         loading="lazy">
-                    <span class="al-card-num">07</span>
+                    <span class="al-card-num">10</span>
                 </div>
                 <div class="al-card-body">
                     <span class="al-card-category">Content · Social</span>
@@ -854,15 +942,18 @@
                         <span class="al-tag">AI Captions</span>
                         <span class="al-tag">Scheduling</span>
                     </div>
+                    <div class="al-card-cta-row">
+                        <span class="al-card-read-link">Read Full Case Study ↗</span>
+                    </div>
                 </div>
             </article>
 
-            <!-- Card 08 -->
-            <article class="al-card" data-category="n8n ai-agent">
+            <!-- Card 11: Smart Email Retry System -->
+            <article class="al-card" data-category="n8n ai-agent" data-case-study="smart-email-retry" tabindex="0" role="button" aria-label="Open Smart Email Retry System case study">
                 <div class="al-card-img-wrap">
                     <img src="n8n-library/email-retry-automation.jpg" alt="Email Retry and Delivery Automation"
                         loading="lazy">
-                    <span class="al-card-num">08</span>
+                    <span class="al-card-num">11</span>
                 </div>
                 <div class="al-card-body">
                     <span class="al-card-category">Email · Reliability</span>
@@ -876,46 +967,54 @@
                         <span class="al-tag">Retry Logic</span>
                         <span class="al-tag">Monitoring</span>
                     </div>
+                    <div class="al-card-cta-row">
+                        <span class="al-card-read-link">Read Full Case Study ↗</span>
+                    </div>
                 </div>
             </article>
 
-            <!-- Card 09 -->
-            <article class="al-card" data-category="lead-gen n8n">
+            <!-- Card 12: WhatsApp Outreach Automation -->
+            <article class="al-card" data-category="lead-gen n8n" data-case-study="whatsapp-outreach" tabindex="0" role="button" aria-label="Open WhatsApp Outreach Automation case study">
                 <div class="al-card-img-wrap">
-                    <img src="n8n-library/crm-lead-pipeline.jpg" alt="WhatsApp Outreach Automation" loading="lazy">
-                    <span class="al-card-num">09</span>
+                    <img src="assets/whatsapp-outreach-architecture.svg" alt="WhatsApp Outreach Automation" loading="lazy">
+                    <span class="al-card-num">12</span>
                 </div>
                 <div class="al-card-body">
-                    <span class="al-card-category">Outreach · n8n</span>
+                    <span class="al-card-category">Outreach · WhatsApp</span>
                     <h2 class="al-card-title">WhatsApp Outreach Automation</h2>
                     <p class="al-card-desc">Automates lead outreach, message sequences, response tracking, and CRM
-                        synchronization over WhatsApp for multi-channel sales pipeline execution.</p>
+                        synchronization over WhatsApp Cloud API for multi-channel sales pipeline execution.</p>
                     <div class="al-card-tags">
                         <span class="al-tag">WhatsApp</span>
                         <span class="al-tag">n8n</span>
                         <span class="al-tag">CRM</span>
                         <span class="al-tag">Outreach</span>
                     </div>
+                    <div class="al-card-cta-row">
+                        <span class="al-card-read-link">Read Full Case Study ↗</span>
+                    </div>
                 </div>
             </article>
 
-            <!-- Card 10 -->
-            <article class="al-card" data-category="ai-agent n8n">
+            <!-- Card 13: AI Voice Receptionist -->
+            <article class="al-card" data-category="ai-agent n8n" data-case-study="ai-voice-receptionist" tabindex="0" role="button" aria-label="Open AI Voice Receptionist case study">
                 <div class="al-card-img-wrap">
-                    <img src="n8n-library/AI-Powered Dental Clinic Receptionist Automation.jpg"
-                        alt="AI Voice Receptionist" loading="lazy">
-                    <span class="al-card-num">10</span>
+                    <img src="assets/ai-voice-receptionist-architecture.svg" alt="AI Voice Receptionist" loading="lazy">
+                    <span class="al-card-num">13</span>
                 </div>
                 <div class="al-card-body">
                     <span class="al-card-category">AI Agent · Voice</span>
                     <h2 class="al-card-title">AI Voice Receptionist</h2>
                     <p class="al-card-desc">Voice-enabled AI receptionist system handling incoming phone calls,
-                        answering queries, qualifying prospects, and booking calendar appointments automatically.</p>
+                        answering queries, qualifying prospects, and booking calendar appointments automatically with sub-650ms latency.</p>
                     <div class="al-card-tags">
                         <span class="al-tag">Vapi</span>
                         <span class="al-tag">AI Voice</span>
                         <span class="al-tag">Calendly</span>
                         <span class="al-tag">n8n</span>
+                    </div>
+                    <div class="al-card-cta-row">
+                        <span class="al-card-read-link">Read Full Case Study ↗</span>
                     </div>
                 </div>
             </article>
@@ -943,6 +1042,7 @@
 
         // Smooth Scroll
         const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smooth: true });
+        window.lenis = lenis;
         function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
         requestAnimationFrame(raf);
         // Theme Settings Menu Logic
@@ -1050,6 +1150,10 @@
             });
         });
     </script>
+
+    <!-- Case Studies & Interactive Modal System -->
+    <script src="case-studies-data.js"></script>
+    <script src="case-study-modal.js"></script>
 
 </body>
 
