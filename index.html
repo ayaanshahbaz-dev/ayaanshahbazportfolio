@@ -599,7 +599,7 @@
     <!-- Floating Controls (Right) -->
     <div class="floating-controls">
         <button class="float-btn" aria-label="Back to Top" id="backToTopBtn" title="Back to Top"
-            onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+            onclick="if(window.lenis){window.lenis.scrollTo(0);}else{window.scrollTo({top: 0, behavior: 'smooth'});}"
             style="opacity:0;pointer-events:none;transform:translateY(12px);">
             <i data-lucide="arrow-up"></i>
         </button>
@@ -1216,28 +1216,23 @@
     <script>
         lucide.createIcons();
 
-        // Initialize Lenis Smooth Scrolling
+        // Initialize Lenis Smooth Scrolling (Optimized for Trackpads & Touchpads)
         const lenis = new Lenis({
-            duration: 1.2,
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Apple-like ease
-            direction: 'vertical',
-            gestureDirection: 'vertical',
-            smooth: true,
-            mouseMultiplier: 1,
-            smoothTouch: false,
-            touchMultiplier: 2,
+            lerp: 0.1,
+            wheelMultiplier: 1.0,
+            touchMultiplier: 1.2,
+            smoothWheel: true,
+            syncTouch: false,
         });
         window.lenis = lenis;
 
-        function raf(time) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
-
-        requestAnimationFrame(raf);
-
-        // Register ScrollTrigger
+        // Register ScrollTrigger and sync with Lenis
         gsap.registerPlugin(ScrollTrigger);
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000);
+        });
+        gsap.ticker.lagSmoothing(0);
 
         // Fade out the hero mountain background into About section
         gsap.to([".hero-mountains-bg", ".bg-text"], {

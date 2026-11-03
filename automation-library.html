@@ -170,6 +170,10 @@
 
     <style>
         /* ===== PAGE LAYOUT ===== */
+        html {
+            scroll-behavior: auto !important;
+        }
+
         body {
             padding-bottom: 0;
             background: #0d0d0d;
@@ -344,22 +348,25 @@
 
         /* ===== FILTER BAR ===== */
         .al-filter-bar {
+            max-width: 1380px;
+            margin: 0 auto;
             display: flex;
             align-items: center;
-            gap: 0.6rem;
-            padding: 2.5rem 8% 1.5rem;
+            gap: 0.55rem;
+            padding: 2.2rem 4% 1.25rem;
             flex-wrap: wrap;
+            width: 100%;
         }
 
         .al-filter-btn {
-            padding: 0.45rem 1.1rem;
+            padding: 0.4rem 1rem;
             border-radius: 100px;
             border: 1px solid rgba(255, 255, 255, 0.12);
             background: transparent;
             color: rgba(255, 255, 255, 0.5);
-            font-size: 0.72rem;
+            font-size: 0.68rem;
             font-weight: 700;
-            letter-spacing: 1px;
+            letter-spacing: 0.8px;
             text-transform: uppercase;
             cursor: pointer;
             transition: all 0.2s ease;
@@ -375,25 +382,28 @@
 
         /* ===== GRID ===== */
         .al-grid-section {
-            padding: 1rem 8% 6rem;
+            max-width: 1380px;
+            margin: 0 auto;
+            padding: 0.75rem 4% 5rem;
+            width: 100%;
         }
 
         .al-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.35rem;
         }
 
         /* ===== CARD ===== */
         .al-card {
             background: #111111;
             border: 1px solid rgba(255, 255, 255, 0.07);
-            border-radius: 16px;
+            border-radius: 14px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
             transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: default;
+            cursor: pointer;
             opacity: 0;
             transform: translateY(30px);
         }
@@ -401,7 +411,7 @@
         .al-card:hover {
             border-color: rgba(255, 255, 255, 0.18);
             transform: translateY(-4px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
         }
 
         /* Image */
@@ -429,65 +439,69 @@
 
         .al-card-num {
             position: absolute;
-            top: 1rem;
-            left: 1rem;
-            font-size: 0.65rem;
+            top: 0.85rem;
+            left: 0.85rem;
+            font-size: 0.6rem;
             font-weight: 800;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             color: rgba(255, 255, 255, 0.5);
             background: rgba(0, 0, 0, 0.6);
             backdrop-filter: blur(8px);
-            padding: 0.3rem 0.7rem;
+            padding: 0.25rem 0.65rem;
             border-radius: 100px;
         }
 
         /* Body */
         .al-card-body {
-            padding: 1.4rem 1.5rem 1.5rem;
+            padding: 1.15rem 1.25rem 1.25rem;
             display: flex;
             flex-direction: column;
             flex: 1;
-            gap: 0.75rem;
+            gap: 0.55rem;
         }
 
         .al-card-category {
-            font-size: 0.65rem;
+            font-size: 0.62rem;
             font-weight: 700;
-            letter-spacing: 3px;
+            letter-spacing: 2.2px;
             text-transform: uppercase;
             color: var(--primary-blue, #fff);
-            opacity: 0.7;
+            opacity: 0.75;
         }
 
         .al-card-title {
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             font-weight: 800;
             color: #fff;
-            line-height: 1.2;
-            letter-spacing: -0.5px;
+            line-height: 1.25;
+            letter-spacing: -0.3px;
         }
 
         .al-card-desc {
-            font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.45);
-            line-height: 1.7;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.48);
+            line-height: 1.55;
             flex: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
 
         /* Tags */
         .al-card-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.4rem;
-            margin-top: 0.25rem;
+            gap: 0.35rem;
+            margin-top: 0.15rem;
         }
 
         .al-tag {
-            font-size: 0.62rem;
+            font-size: 0.58rem;
             font-weight: 700;
-            letter-spacing: 1px;
+            letter-spacing: 0.8px;
             text-transform: uppercase;
-            padding: 0.28rem 0.7rem;
+            padding: 0.22rem 0.6rem;
             border-radius: 100px;
             border: 1px solid rgba(255, 255, 255, 0.1);
             color: rgba(255, 255, 255, 0.5);
@@ -570,36 +584,183 @@
             height: 18px;
         }
 
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
+        /* ===== RESPONSIVE & LAPTOP SIZING ===== */
+        /* Laptop & Smaller Desktop Screens: Compact, non-bulky layout so section 2 fits beautifully */
+        @media (min-width: 901px) and (max-width: 1440px) {
+            .al-hero {
+                min-height: 76vh;
+                padding: 6.5rem 5% 3.2rem;
+            }
+
+            .al-hero-title {
+                font-size: clamp(3.2rem, 5.8vw, 4.8rem);
+                letter-spacing: -3px;
+                margin-bottom: 1.2rem;
+            }
+
+            .al-hero-sub {
+                font-size: 0.9rem;
+                line-height: 1.65;
+                max-width: 440px;
+                margin-bottom: 1.8rem;
+            }
+
+            .al-hero-stat-row {
+                gap: 2rem;
+                margin-top: 0.5rem;
+            }
+
+            .al-hero-stat-num {
+                font-size: 1.5rem;
+            }
+
+            .al-hero-stat-label {
+                font-size: 0.58rem;
+                letter-spacing: 2px;
+            }
+
+            .al-stat-divider {
+                height: 24px;
+            }
+
+            /* Section 2: Compact, refined filter bar and card grid */
+            .al-filter-bar {
+                padding: 1.8rem 4% 1rem;
+                gap: 0.45rem;
+            }
+
+            .al-filter-btn {
+                padding: 0.32rem 0.85rem;
+                font-size: 0.65rem;
+                letter-spacing: 0.7px;
+            }
+
+            .al-grid-section {
+                padding: 0.5rem 4% 4rem;
+            }
+
+            .al-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 1.15rem;
+            }
+
+            .al-card {
+                border-radius: 13px;
+            }
+
+            .al-card-num {
+                top: 0.75rem;
+                left: 0.75rem;
+                font-size: 0.58rem;
+                padding: 0.22rem 0.55rem;
+            }
+
+            .al-card-body {
+                padding: 1rem 1.15rem 1.15rem;
+                gap: 0.45rem;
+            }
+
+            .al-card-category {
+                font-size: 0.58rem;
+                letter-spacing: 1.8px;
+            }
+
+            .al-card-title {
+                font-size: 0.98rem;
+                line-height: 1.25;
+            }
+
+            .al-card-desc {
+                font-size: 0.76rem;
+                line-height: 1.5;
+                -webkit-line-clamp: 3;
+            }
+
+            .al-card-tags {
+                gap: 0.3rem;
+                margin-top: 0.1rem;
+            }
+
+            .al-tag {
+                font-size: 0.55rem;
+                padding: 0.2rem 0.5rem;
+                letter-spacing: 0.6px;
+            }
+
+            .al-card-cta-row {
+                margin-top: 0.35rem;
+                padding-top: 0.55rem;
+            }
+
+            .al-card-read-link {
+                font-size: 0.62rem;
+                letter-spacing: 1px;
+            }
+        }
+
+        /* Tablets & Medium Screens */
+        @media (min-width: 641px) and (max-width: 900px) {
+            .al-hero {
+                min-height: 80vh;
+                padding: 6.5rem 5% 3.5rem;
+            }
+
+            .al-hero-title {
+                font-size: clamp(3rem, 8vw, 4.2rem);
+            }
+
+            .al-filter-bar {
+                padding: 1.8rem 5% 1rem;
+                gap: 0.45rem;
+            }
+
+            .al-grid-section {
+                padding: 0.5rem 5% 4rem;
+            }
+
+            .al-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 1.1rem;
+            }
+        }
+
+        /* Mobile Devices */
+        @media (max-width: 640px) {
             .al-topnav {
                 padding: 1rem 5%;
             }
 
             .al-hero {
-                padding: 7rem 5% 4rem;
-                min-height: 85vh;
+                padding: 6.5rem 5% 3.5rem;
+                min-height: 80vh;
             }
 
             .al-hero-title {
-                letter-spacing: -3px;
-                font-size: clamp(3rem, 12vw, 5rem);
+                letter-spacing: -2px;
+                font-size: clamp(2.6rem, 11vw, 3.8rem);
             }
 
             .al-hero-stat-row {
-                gap: 1.5rem;
+                gap: 1.2rem;
             }
 
             .al-filter-bar {
-                padding: 2rem 5% 1rem;
+                padding: 1.5rem 5% 0.75rem;
+                gap: 0.4rem;
+            }
+
+            .al-filter-btn {
+                padding: 0.3rem 0.75rem;
+                font-size: 0.64rem;
             }
 
             .al-grid-section {
-                padding: 1rem 5% 4rem;
+                padding: 0.5rem 5% 3.5rem;
             }
 
             .al-grid {
                 grid-template-columns: 1fr;
+                gap: 1.2rem;
             }
 
             .al-footer {
@@ -613,7 +774,7 @@
 
     <!-- Back to top -->
     <button class="al-top-btn" id="alTopBtn" aria-label="Back to top"
-        onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        onclick="if(window.lenis){window.lenis.scrollTo(0);}else{window.scrollTo({top:0,behavior:'smooth'});}">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
             stroke-linejoin="round">
             <polyline points="18 15 12 9 6 15" />
@@ -1040,11 +1201,15 @@
     <script>
         lucide.createIcons();
 
-        // Smooth Scroll
-        const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smooth: true });
+        // Smooth Scroll (Optimized for Trackpads & Touchpads — zero delay, instant response)
+        const lenis = new Lenis({
+            lerp: 0.1,
+            wheelMultiplier: 1.0,
+            touchMultiplier: 1.2,
+            smoothWheel: true,
+            syncTouch: false
+        });
         window.lenis = lenis;
-        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
-        requestAnimationFrame(raf);
         // Theme Settings Menu Logic
         const settingsBtn = document.getElementById('settingsBtn');
         const settingsMenu = document.getElementById('settingsMenu');
@@ -1099,6 +1264,13 @@
 
         gsap.registerPlugin(ScrollTrigger);
 
+        // Synchronize Lenis with GSAP ScrollTrigger ticker for seamless 60/120fps trackpad scrolling
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000);
+        });
+        gsap.ticker.lagSmoothing(0);
+
         // Hero entrance
         gsap.fromTo('#alTopNav', { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', delay: 0.1 });
         gsap.fromTo('#alEyebrow', { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out', delay: 0.3 });
@@ -1147,6 +1319,12 @@
                     card.style.pointerEvents = show ? 'auto' : 'none';
                     card.style.transform = show ? 'translateY(0)' : 'translateY(8px)';
                 });
+
+                // Immediately recalculate ScrollTrigger positions and Lenis scroll bounds
+                ScrollTrigger.refresh();
+                if (window.lenis) {
+                    window.lenis.resize();
+                }
             });
         });
     </script>

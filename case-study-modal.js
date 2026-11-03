@@ -50,7 +50,7 @@
 
         wrapper.innerHTML = `
             <div class="csm-backdrop" id="csmBackdrop"></div>
-            <div class="csm-drawer" id="csmDrawer" tabindex="-1">
+            <div class="csm-drawer" id="csmDrawer" tabindex="-1" data-lenis-prevent>
                 <!-- Sticky Header -->
                 <header class="csm-header">
                     <div class="csm-header-left">
@@ -78,7 +78,7 @@
                 </header>
 
                 <!-- Scrollable Body Content -->
-                <div class="csm-body" id="csmBody">
+                <div class="csm-body" id="csmBody" data-lenis-prevent>
                     <!-- Injected dynamically via renderCaseStudy() -->
                 </div>
 

@@ -14,32 +14,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    // 2. Initialize Lenis Smooth Scroll
+    // 2. Initialize Lenis Smooth Scroll (Optimized for Trackpads & Touchpads)
     let lenis = null;
     if (!prefersReducedMotion && typeof Lenis !== 'undefined') {
         lenis = new Lenis({
-            duration: 1.2,
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-            direction: 'vertical',
-            gestureDirection: 'vertical',
-            smooth: true,
-            mouseMultiplier: 1,
-            smoothTouch: false,
-            touchMultiplier: 2,
+            lerp: 0.1,
+            wheelMultiplier: 1.0,
+            touchMultiplier: 1.2,
+            smoothWheel: true,
+            syncTouch: false,
         });
 
-        function raf(time) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
-        requestAnimationFrame(raf);
-
-        if (typeof ScrollTrigger !== 'undefined') {
+        if (typeof ScrollTrigger !== 'undefined' && typeof gsap !== 'undefined') {
             lenis.on('scroll', ScrollTrigger.update);
             gsap.ticker.add((time) => {
                 lenis.raf(time * 1000);
             });
             gsap.ticker.lagSmoothing(0);
+        } else {
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
         }
     }
 
