@@ -1891,20 +1891,20 @@ body.light-theme .hero-image {
 /* Bottom Nav — Mobile Responsive */
 @media (max-width: 600px) {
     .bottom-nav {
-        bottom: 14px;
+        bottom: max(12px, env(safe-area-inset-bottom));
     }
 
     /* On very small screens collapse active item too — no label */
     .bnav-item,
     .bnav-item.active {
-        width: 46px !important;
+        width: 42px !important;
         gap: 0 !important;
-        padding: 0 5px !important;
+        padding: 0 3px !important;
     }
 
     .bnav-inner {
         gap: 2px;
-        padding: 6px 6px;
+        padding: 5px 6px;
     }
 
     .bnav-label {
@@ -1923,14 +1923,15 @@ body.light-theme .hero-image {
         min-width: 16px;
     }
 
+    /* Float settings and back-to-top cleanly above the dock so they NEVER collide */
     .floating-controls {
-        bottom: 14px;
+        bottom: calc(max(12px, env(safe-area-inset-bottom)) + 58px);
         right: 14px;
         gap: 8px;
     }
 
     .settings-control {
-        bottom: 14px;
+        bottom: calc(max(12px, env(safe-area-inset-bottom)) + 58px);
         left: 14px;
     }
 
@@ -2903,7 +2904,7 @@ body.light-theme .htb-tz {
 .wib-card-visual img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
     display: block;
     transition: transform 0.6s ease;
@@ -2979,10 +2980,16 @@ body.light-theme .wib-card-title {
 @media (max-width: 480px) {
     .wib-cards {
         grid-template-columns: 1fr;
+        max-width: 380px;
+        margin: 0 auto;
     }
 
     .wib-card-visual {
-        aspect-ratio: 16 / 9;
+        aspect-ratio: 548 / 904;
+    }
+
+    .wib-card-visual img {
+        object-fit: contain;
     }
 }
 
@@ -4107,6 +4114,47 @@ body.light-theme .cic-cal-text {
     .htb-right {
         justify-content: center;
     }
+
+    /* Zero-Crop Hero Mountains Background — Full 'PORTFOLIO' text completely visible */
+    .hero-mountains-bg {
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: center 6%;
+        mask-image: linear-gradient(to bottom, black 72%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to bottom, black 72%, transparent 100%);
+    }
+
+    /* Zero-Crop Tech Cosmic Overlay */
+    .tech-bg-overlay {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center 15%;
+        opacity: 0.45;
+    }
+
+    /* Selected Work Screenshots: Aspect-ratio preservation, zero UI cropping */
+    .wl-grid-right img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: contain;
+        background: #090a0d;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* iOS Safari Auto-Zoom Fix on Input Focus (min 16px font-size) */
+    .cf-group input,
+    .cf-group textarea {
+        font-size: 16px !important;
+    }
+
+    /* Native App Touch Feedback */
+    .btn:active,
+    .wl-item:active,
+    .contact-info-card:active {
+        transform: scale(0.985);
+    }
 }
 
 /* ============================================================
@@ -5021,19 +5069,20 @@ body.csm-open {
     color: #fff;
 }
 
-/* Mobile Responsiveness */
+/* Case Study Modal Mobile Responsiveness */
 @media (max-width: 900px) {
     .csm-drawer {
         width: 100vw;
     }
 
     .csm-header {
-        padding: 1rem 1.4rem;
+        padding: 0.9rem 1.25rem;
+        padding-top: max(0.9rem, env(safe-area-inset-top));
     }
 
     .csm-body {
-        padding: 1.8rem 1.4rem 3rem;
-        gap: 2rem;
+        padding: 1.6rem 1.2rem 3rem;
+        gap: 1.8rem;
     }
 
     .csm-grid-two-col {
@@ -5041,7 +5090,8 @@ body.csm-open {
     }
 
     .csm-footer {
-        padding: 1rem 1.4rem;
+        padding: 1rem 1.2rem;
+        padding-bottom: max(1.2rem, env(safe-area-inset-bottom));
     }
 
     .csm-nav-meta {
@@ -5050,5 +5100,95 @@ body.csm-open {
 
     .csm-nav-btn {
         padding: 0.6rem 0.9rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .csm-header {
+        padding: 0.8rem 1rem;
+        padding-top: max(0.8rem, env(safe-area-inset-top));
+        gap: 0.6rem;
+    }
+
+    .csm-header-left {
+        gap: 0.65rem;
+    }
+
+    .csm-header-actions {
+        gap: 0.5rem;
+    }
+
+    .csm-copy-btn .csm-copy-text {
+        display: none;
+    }
+
+    .csm-copy-btn {
+        width: 36px;
+        height: 36px;
+        padding: 0;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    .csm-close-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .csm-type-pill {
+        font-size: 0.58rem;
+        padding: 0.15rem 0.5rem;
+        max-width: 140px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .csm-main-title {
+        font-size: clamp(1.85rem, 8vw, 2.6rem);
+        letter-spacing: -1px;
+    }
+
+    .csm-subtitle {
+        font-size: 0.88rem;
+        line-height: 1.6;
+    }
+
+    /* 2x2 Clean Metrics Grid */
+    .csm-metrics-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.55rem !important;
+    }
+
+    .csm-metric-card {
+        padding: 0.85rem 1rem !important;
+    }
+
+    .csm-metric-val {
+        font-size: 1.4rem !important;
+    }
+
+    .csm-metric-lbl {
+        font-size: 0.62rem !important;
+        letter-spacing: 1px !important;
+    }
+
+    /* Zero-Crop Case Study Hero Visual */
+    .csm-visual-wrap {
+        border-radius: 12px;
+    }
+
+    .csm-hero-img {
+        object-fit: contain !important;
+        background: #090a0d !important;
+    }
+
+    .csm-card {
+        padding: 1.25rem !important;
+    }
+
+    .csm-arch-flow,
+    .csm-challenges-grid {
+        grid-template-columns: 1fr !important;
     }
 }

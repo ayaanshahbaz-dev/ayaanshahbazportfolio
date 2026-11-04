@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
     <!-- Primary Meta -->
     <title>Automation Library | Ayaan Shahbaz — AI Automation Engineer</title>
@@ -724,34 +724,81 @@
             }
         }
 
-        /* Mobile Devices */
+        /* Mobile Devices (Smartphones 320px–640px) */
         @media (max-width: 640px) {
             .al-topnav {
-                padding: 1rem 5%;
+                padding: 0.85rem 5%;
+                padding-top: max(0.85rem, env(safe-area-inset-top));
+            }
+
+            .al-back-link {
+                font-size: 0.68rem;
+                letter-spacing: 1px;
             }
 
             .al-hero {
-                padding: 6.5rem 5% 3.5rem;
-                min-height: 80vh;
+                padding: 5.5rem 5% 1.8rem;
+                min-height: auto;
+            }
+
+            .al-hero-bg-text {
+                font-size: clamp(3.8rem, 16vw, 6.5rem);
             }
 
             .al-hero-title {
-                letter-spacing: -2px;
-                font-size: clamp(2.6rem, 11vw, 3.8rem);
+                letter-spacing: -1.5px;
+                font-size: clamp(2.2rem, 9.5vw, 3.2rem);
+                margin-bottom: 1rem;
+            }
+
+            .al-hero-sub {
+                font-size: 0.84rem;
+                line-height: 1.6;
+                max-width: 90%;
+                margin-bottom: 1.4rem;
             }
 
             .al-hero-stat-row {
-                gap: 1.2rem;
+                gap: 1rem;
+                margin-top: 0.25rem;
             }
 
+            .al-hero-stat-num {
+                font-size: 1.35rem;
+            }
+
+            .al-hero-stat-label {
+                font-size: 0.54rem;
+                letter-spacing: 1.5px;
+            }
+
+            .al-stat-divider {
+                height: 20px;
+            }
+
+            /* Single-row horizontal swipe filter rail (App Store / YouTube style) */
             .al-filter-bar {
-                padding: 1.5rem 5% 0.75rem;
-                gap: 0.4rem;
+                display: flex;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                padding: 1.1rem 5% 0.6rem;
+                gap: 0.45rem;
+                mask-image: linear-gradient(to right, black 86%, transparent 100%);
+                -webkit-mask-image: linear-gradient(to right, black 86%, transparent 100%);
+            }
+
+            .al-filter-bar::-webkit-scrollbar {
+                display: none;
             }
 
             .al-filter-btn {
-                padding: 0.3rem 0.75rem;
-                font-size: 0.64rem;
+                padding: 0.35rem 0.85rem;
+                font-size: 0.65rem;
+                letter-spacing: 0.6px;
+                flex-shrink: 0;
+                white-space: nowrap;
             }
 
             .al-grid-section {
@@ -760,11 +807,39 @@
 
             .al-grid {
                 grid-template-columns: 1fr;
-                gap: 1.2rem;
+                gap: 1.15rem;
+            }
+
+            .al-card {
+                border-radius: 14px;
+            }
+
+            .al-card:active {
+                transform: scale(0.985);
+                border-color: rgba(255, 255, 255, 0.25);
+            }
+
+            .al-card-body {
+                padding: 1rem 1.15rem 1.15rem;
+            }
+
+            .al-card-title {
+                font-size: 1rem;
+            }
+
+            .al-card-desc {
+                font-size: 0.78rem;
+                line-height: 1.5;
+            }
+
+            .al-top-btn {
+                bottom: max(20px, env(safe-area-inset-bottom));
+                right: 18px;
             }
 
             .al-footer {
                 padding: 1.5rem 5%;
+                padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
             }
         }
     </style>
