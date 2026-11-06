@@ -788,6 +788,53 @@ body.theme-forest-shadow {
     opacity: 0.8;
 }
 
+/* Hero Resume Pill (High CRO) */
+.btn-resume-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.8rem 1.6rem;
+    background: rgba(59, 130, 246, 0.12);
+    border: 1px solid rgba(59, 130, 246, 0.35);
+    border-radius: 100px;
+    color: #93c5fd !important;
+    font-size: 0.72rem;
+    font-weight: 800;
+    font-family: inherit;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.15);
+}
+
+.btn-resume-pill:hover {
+    transform: translateY(-2px);
+    background: rgba(59, 130, 246, 0.22);
+    border-color: rgba(59, 130, 246, 0.6);
+    color: #ffffff !important;
+    box-shadow: 0 6px 24px rgba(59, 130, 246, 0.35);
+}
+
+.btn-resume-pill svg,
+.btn-resume-pill i {
+    width: 15px;
+    height: 15px;
+    stroke-width: 2.2;
+}
+
+body.light-theme .btn-resume-pill {
+    background: rgba(37, 99, 235, 0.08);
+    border-color: rgba(37, 99, 235, 0.3);
+    color: #2563eb !important;
+}
+
+body.light-theme .btn-resume-pill:hover {
+    background: rgba(37, 99, 235, 0.15);
+    color: #1d4ed8 !important;
+}
+
 /* Right Content */
 .right-content {
     flex: 0 0 320px;
