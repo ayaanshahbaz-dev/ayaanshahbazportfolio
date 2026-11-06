@@ -1,4 +1,31 @@
 User-agent: *
 Allow: /
 
+# Explicit AI Search & Answer Engine Access (AEO / GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /
+
+# LLM Discovery File & Sitemap
+# LLMs-Text: https://ayaanshahbaz.space/llms.txt
 Sitemap: https://ayaanshahbaz.space/sitemap.xml

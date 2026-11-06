@@ -378,6 +378,18 @@
 
             <!-- Confidentiality Notice -->
             ${noticeHTML}
+
+            <!-- Direct 1:1 Booking CTA Banner (Passes Internal Anchor Authority) -->
+            <section class="csm-cta-card">
+                <div class="csm-cta-info">
+                    <span class="csm-sec-eyebrow text-blue">ENGINEERING & AUTOMATION INQUIRIES</span>
+                    <h3 class="csm-cta-heading">Need a Similar AI System or Automated Pipeline?</h3>
+                    <p class="csm-cta-sub">Schedule a 15-minute technical discovery call with Ayaan Shahbaz to review requirements and architecture.</p>
+                </div>
+                <a href="/book-a-meeting" class="csm-cta-btn">
+                    <span>Book a 15-Min Scope Call ↗</span>
+                </a>
+            </section>
         `;
     }
 

@@ -1,0 +1,34 @@
+# Ayaan Shahbaz — AI Automation Engineer & Full-Stack Developer
+
+> Ayaan Shahbaz is an AI Automation Engineer and Full-Stack Developer specializing in autonomous AI agents, production n8n workflow automation, Retrieval-Augmented Generation (RAG) pipelines, Python/Django REST architectures, and Next.js applications. Based in Pakistan and collaborating with international founders, startups, and remote teams worldwide.
+
+## Primary Roles & Professional Titles
+- AI Automation Engineer
+- Full-Stack Developer (Python, Django, Next.js, TypeScript)
+- AI Systems & Autonomous Agent Developer
+- n8n Automation Specialist
+- RAG & LLM Integration Engineer
+
+## Core Capabilities & Technical Arsenal
+- **Agentic AI & LLMs:** Autonomous Multi-Agent Systems, Tool-Calling Agents, Model Context Protocol (MCP), Retrieval-Augmented Generation (RAG), Vector Embeddings (ChromaDB, Pinecone, pgvector), Context Engineering, Guardrails, OpenAI API, Anthropic Claude, Google Gemini, OpenRouter.
+- **Workflow Automation:** n8n (Self-hosted & Cloud), Webhook Orchestration, WhatsApp Cloud API, CRM Integrations (HubSpot, Airtable, Notion), Voice Agents (Vapi, ElevenLabs, Twilio), Lead Capture & Outreach Pipelines.
+- **Backend Architecture:** Python, Django, Django REST Framework (DRF), PostgreSQL, Redis, Celery, JWT Authentication, Role-Based Access Control (RBAC), BOLA-Defended API Gateways.
+- **Frontend & SaaS:** Next.js, React, TypeScript, Tailwind CSS, Interactive Dashboards, Real-Time Streaming UI.
+
+## Featured Production Systems
+- **OrvinHQ:** Multi-tenant enterprise workplace and HR operations platform built with Python Django and Next.js, featuring stateless JWT rotation, cross-tenant BOLA isolation, and real-time team coordination.
+- **AURA AI:** RAG-powered business knowledge assistant with Model Context Protocol (MCP) and n8n orchestration for autonomous context injection, appointment scheduling, and lead qualification.
+- **Convoo AI:** Streaming conversational AI web platform featuring persistent user memory, tool integrations, and real-time response streaming.
+- **Autonomous Content Intelligence System:** Multi-agent pipeline researching industry trends, generating synthesized media assets, and executing publication workflows without human intervention.
+- **AI Voice & WhatsApp Dental Receptionist:** 24/7 conversational receptionist powered by Vapi, LLMs, and n8n handling patient inquiries, qualifying procedures, and booking slots directly into clinic calendars.
+
+## Key Links & Resources
+- **Official Portfolio:** https://ayaanshahbaz.space/
+- **Automation Library (Live Case Studies):** https://ayaanshahbaz.space/automation-library
+- **Book a 1:1 Technical Scope Call:** https://ayaanshahbaz.space/book-a-meeting
+- **Videography & High-Retention Media Portfolio:** https://media.ayaanshahbaz.space/
+- **GitHub:** https://github.com/ayaanshahbaz-dev
+- **LinkedIn:** https://www.linkedin.com/in/ayaan-shahbaz/
+- **YouTube:** https://www.youtube.com/@ayaanautomates
+- **Direct Inquiries:** ayaanshahbaz.dev@gmail.com
+
